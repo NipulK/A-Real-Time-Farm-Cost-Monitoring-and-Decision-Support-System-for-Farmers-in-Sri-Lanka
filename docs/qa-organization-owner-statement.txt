@@ -1,0 +1,52 @@
+Workspace
+Reports & exports
+18 Oct 2026
+Add record
+FARMWISE / REPORTS & EXPORTS
+Reports & exports
+
+A dependable record of each season, from field to sale.
+
+Cultivation
+All accessible cultivations
+Company Watermelon Season
+Company Second Season
+
+Export only records you are permitted to access.
+
+Summary CSV
+Ledger CSV
+Print report
+Cultivation financial statement
+
+LKR · actual records in the selected scope
+
+Investment funding (capital)
+LKR 20,000
+Cash cultivation costs
+LKR 6,000
+Imputed cultivation costs
+LKR 0
+Total economic cost
+LKR 6,000
+Sales revenue (agreed value)
+LKR 12,000
+Economic profit / loss
+LKR 6,000
+Customer payments received
+LKR 5,000
+Receivables
+LKR 7,000
+Net recorded cash (funding + payments − cash costs)
+LKR 19,000
+
+Unsold harvest is not recognized as sales revenue. This is a cultivation monitoring statement; no tax or full business balance-sheet treatment is applied. CSV amounts use LKR; quantity columns use kg and areas use acres.
+
+Correction history
+
+Voided records remain visible and excluded from actual totals
+
+DATE	TYPE	CULTIVATION	ORIGINAL PAYLOAD
+Farmwise
+Made for decisions grounded in your records.
+LKR · kg · acres · Asia/Colombo

@@ -1,0 +1,337 @@
+Workspace
+Administration
+18 Oct 2026
+Add record
+FARMWISE / ADMINISTRATION
+Administration
+
+A dependable record of each season, from field to sale.
+
+Account security
+
+Change your password and revoke previous sessions
+
+Change my password
+
+Signed in as qa-admin@example.test. Passwords stay in this local installation.
+
+People & access
+
+Create local accounts. Assign supervisors inside each cultivation.
+
+Add person
+NAME	EMAIL / MOBILE	ROLE	ACCESS	
+QA Administrator	qa-admin@example.test	System administrator	Active	
+QA Independent	qa-independent@example.test	Independent farmer	Active	Reset password Deactivate
+Mobile only	+94770000015	Independent farmer	Active	Reset password Deactivate
+QA Organization Owner	qa-owner@example.test	Organization owner	Active	Reset password Deactivate
+QA Farmer A	qa-farmer-a@example.test	Organization farmer	Active	Reset password Deactivate
+QA Farmer B	qa-farmer-b@example.test	Organization farmer	Active	Reset password Deactivate
+QA Supervisor	qa-supervisor@example.test	Supervisor	Active	Reset password Deactivate
+QA Other Owner	qa-other-owner@example.test	Organization owner	Active	Reset password Deactivate
+QA Pending Owner	qa-pending-owner@example.test	Organization owner	Active	Reset password Deactivate
+QA Admin Created Farmer	admin-created-farmer@example.test	Independent farmer	Active	Reset password Deactivate
+Crop catalogue
+
+Shared calculation method, crop-specific varieties
+
+Add crop
+Carrot
+Variety entered per cultivation
+Edit
+Grapes
+Variety entered per cultivation
+Edit
+Guava
+Variety entered per cultivation
+Edit
+Leeks
+Variety entered per cultivation
+Edit
+Potato
+Variety entered per cultivation
+Edit
+QA Admin Edited Crop
+QA Three
+Edit
+QA Updated Catalogue Crop
+QA Three
+Edit
+Watermelon
+Variety entered per cultivation
+Edit
+Reference-area policy
+
+Explicit administrator policy; examples are not pre-approved
+
+Set area policy
+QA Updated Catalogue Crop · QA Policy District
+Approved
+Carrot · QA District
+Not Approved
+Audit history
+
+Immutable application events · latest 300 accessible events
+
+Export audit
+WHEN	PERSON	EVENT	DETAILS
+18/10/2026, 17:19:51	QA Administrator	edit land	
+View event
+
+18/10/2026, 17:19:48	QA Administrator	edit field	
+View event
+
+18/10/2026, 17:18:55	QA Administrator	void	
+View event
+
+18/10/2026, 17:18:53	QA Administrator	attach receipt	
+View event
+
+18/10/2026, 17:18:52	QA Administrator	create expense	
+View event
+
+18/10/2026, 17:17:02	QA Administrator	validation	
+View event
+
+18/10/2026, 17:17:02	QA Administrator	validation	
+View event
+
+18/10/2026, 17:17:01	QA Administrator	validation	
+View event
+
+18/10/2026, 17:15:50	QA Administrator	organization approved	
+View event
+
+18/10/2026, 17:15:47	QA Administrator	organization needs_info	
+View event
+
+18/10/2026, 17:15:35	QA Administrator	organization rejected	
+View event
+
+18/10/2026, 17:15:34	QA Administrator	reference area policy	
+View event
+
+18/10/2026, 17:15:33	QA Administrator	create area	
+View event
+
+18/10/2026, 17:15:20	QA Administrator	edit crop	
+View event
+
+18/10/2026, 17:15:19	QA Administrator	create crop	
+View event
+
+18/10/2026, 17:15:18	QA Administrator	user activation	
+View event
+
+18/10/2026, 17:14:58	QA Administrator	user activation	
+View event
+
+18/10/2026, 17:14:48	QA Administrator	create user	
+View event
+
+18/10/2026, 17:14:14	QA Pending Owner	register land	
+View event
+
+18/10/2026, 17:14:14	QA Pending Owner	organization application submitted	
+View event
+
+18/10/2026, 17:14:14	QA Organization Owner	update cultivation	
+View event
+
+18/10/2026, 17:14:14	QA Administrator	validation	
+View event
+
+18/10/2026, 17:14:14	QA Organization Owner	update cultivation	
+View event
+
+18/10/2026, 17:14:14	QA Independent	edit land	
+View event
+
+18/10/2026, 17:14:14	QA Administrator	administrator password reset	
+View event
+
+18/10/2026, 17:14:13	QA Independent	password changed	
+View event
+
+18/10/2026, 17:14:13	QA Supervisor	void	
+View event
+
+18/10/2026, 17:14:13	QA Supervisor	create expense	
+View event
+
+18/10/2026, 17:14:13	QA Supervisor	create payment	
+View event
+
+18/10/2026, 17:14:13	QA Supervisor	create sale	
+View event
+
+18/10/2026, 17:14:13	QA Supervisor	create harvest	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	create investment	
+View event
+
+18/10/2026, 17:14:13	QA Administrator	organization approved	
+View event
+
+18/10/2026, 17:14:13	QA Administrator	organization needs_info	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	memberActive	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	memberActive	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	assign farmer	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	unassign farmer	
+View event
+
+18/10/2026, 17:14:13	QA Farmer A	password changed	
+View event
+
+18/10/2026, 17:14:13	QA Farmer A	password changed	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	assign	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	unassign	
+View event
+
+18/10/2026, 17:14:13	QA Administrator	create area	
+View event
+
+18/10/2026, 17:14:13	QA Administrator	edit crop	
+View event
+
+18/10/2026, 17:14:13	QA Administrator	create crop	
+View event
+
+18/10/2026, 17:14:13	QA Administrator	validation	
+View event
+
+18/10/2026, 17:14:13	QA Independent	update cultivation	
+View event
+
+18/10/2026, 17:14:13	QA Independent	create payment	
+View event
+
+18/10/2026, 17:14:13	QA Independent	void	
+View event
+
+18/10/2026, 17:14:13	QA Independent	create payment	
+View event
+
+18/10/2026, 17:14:13	QA Independent	create sale	
+View event
+
+18/10/2026, 17:14:13	QA Independent	create harvest	
+View event
+
+18/10/2026, 17:14:13	QA Independent	create investment	
+View event
+
+18/10/2026, 17:14:13	QA Administrator	organization approved	
+View event
+
+18/10/2026, 17:14:13	QA Other Owner	register land	
+View event
+
+18/10/2026, 17:14:13	QA Other Owner	organization application submitted	
+View event
+
+18/10/2026, 17:14:13	QA Independent	create expense	
+View event
+
+18/10/2026, 17:14:13	QA Independent	create cultivation	
+View event
+
+18/10/2026, 17:14:13	QA Supervisor	attach receipt	
+View event
+
+18/10/2026, 17:14:13	QA Supervisor	attach receipt	
+View event
+
+18/10/2026, 17:14:13	QA Supervisor	create expense	
+View event
+
+18/10/2026, 17:14:13	QA Supervisor	create expense	
+View event
+
+18/10/2026, 17:14:13	QA Supervisor	create expense	
+View event
+
+18/10/2026, 17:14:13	QA Supervisor	create activity	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	assign farmer	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	assign farmer	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	assign	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	create cultivation	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	register supervisor	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	register organization_farmer	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	register organization_farmer	
+View event
+
+18/10/2026, 17:14:13	QA Administrator	organization approved	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	organization application resubmitted	
+View event
+
+18/10/2026, 17:14:13	QA Administrator	organization needs_info	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	organization application resubmitted	
+View event
+
+18/10/2026, 17:14:13	QA Administrator	organization rejected	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	register land	
+View event
+
+18/10/2026, 17:14:13	QA Independent	register land	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	register land	
+View event
+
+18/10/2026, 17:14:13	QA Organization Owner	organization application submitted	
+View event
+
+18/10/2026, 17:14:13	Mobile only	register land	
+View event
+
+18/10/2026, 17:14:13	Mobile only	independent self-registration	
+View event
+
+18/10/2026, 17:14:12	QA Independent	register land	
+View event
+
+18/10/2026, 17:14:12	QA Independent	independent self-registration	
+View event
+
+18/10/2026, 17:14:12	QA Administrator	workspace setup	
+View event
+
+Local SQLite, local password accounts and private filesystem receipts. PostgreSQL/Supabase authentication, database, storage and hosted access are not connected. Back up the storage directory with the application stopped.
+
+Farmwise
+Made for decisions grounded in your records.
+LKR · kg · acres · Asia/Colombo

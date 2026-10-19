@@ -1,0 +1,842 @@
+{
+  "steps": [
+    {
+      "step": "Before harvest overview",
+      "snapshot": "- complementary:\n  - text: Farm\n  - generic: wise\n  - generic: ®\n  - generic: FARM WORKSPACE\n  - navigation \"Main navigation\":\n    - button \"Overview\":\n      - text: Overview\n    - button \"Cultivations 1\":\n      - text: Cultivations\n      - generic: \"1\"\n    - button \"Land records\":\n      - text: Land records\n    - button \"Activities & labour\":\n      - text: Activities & labour\n    - button \"Expenses & receipts\":\n      - text: Expenses & receipts\n    - button \"Funding & budgets\":\n      - text: Funding & budgets\n    - generic: INSIGHTS & TOOLS\n    - button \"Harvests & sales\":\n      - text: Harvests & sales\n    - button \"Historical prices\":\n      - text: Historical prices\n    - button \"Decision support\":\n      - text: Decision support\n    - button \"Reports & exports\":\n      - text: Reports & exports\n    - button \"Administration\":\n      - text: Administration\n  - text: Local workspace\n  - generic: Persistent data\n  - generic: සA\n  - strong: සිංහල API QA\n  - generic: Independent farmer\n  - button \"Sign out\":\n- link \"Skip to content\":\n  - /url: \"#workspace-content\"\n- main:\n  - text: Workspace\n  - strong: Overview\n  - generic: Language / සිංහල\n  - combobox \"Language / භාෂාව\":\n    - option \"English\" [selected]\n    - option \"සිංහල\"\n  - generic: 18 Oct 2026\n  - button \"Add record\":\n    - generic: Add record\n  - generic: YOUR SEASON, AT A GLANCE\n  - heading \"A clearer view of your farm.\" [level=1]\n  - paragraph: Follow the work, understand the costs, plan what comes next.\n  - generic: Cultivation\n  - combobox \"Cultivation\":\n    - option \"All accessible cultivations\" [selected]\n    - option \"QA Carrot Price Journey\"\n  - article:\n    - generic: Cash cultivation costs\n    - strong: LKR 0\n    - generic: Actual cash costs, recorded once\n  - article:\n    - generic: Sales revenue\n    - strong: LKR 0\n    - generic: LKR 0 payments received\n  - article:\n    - generic: Economic profit / loss\n    - strong: LKR 0\n    - generic: Sales less cash and imputed costs\n  - article:\n    - generic: Budget remaining\n    - strong: LKR 10,000\n    - generic: 0% of cash budget used\n  - heading \"Previous prices for your crop\" [level=2]\n  - paragraph: Carrot\n  - paragraph: Historical prices are unverified reference ranges, not today's selling price or a prediction. Original variants and markets remain separate.\n  - generic: Product / original variant\n  - combobox \"Product / original variant\":\n    - option \"Carrot\"\n    - option \"Carrots\"\n    - option \"නුවරඑළිය - Carrot - N\" [selected]\n  - generic: Claimed market\n  - combobox \"Claimed market\":\n    - option \"All markets\" [selected]\n    - option \"Dambulla\"\n    - option \"Thabuththegama\"\n  - img \"Historical range midpoints over actual calendar dates\":\n    - generic: \"288\"\n    - generic: \"200\"\n    - generic: \"112\"\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-06: 120–220, midpoint 170 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-07: 200–240, midpoint 220 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-17: 200–220, midpoint 210 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-31: 260–260, midpoint 260 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-08-05: 280–280, midpoint 280 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-08-06: 220–280, midpoint 250 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-08-12: 180–230, midpoint 205 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-07: 160–200, midpoint 180 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-08: 170–250, midpoint 210 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-11: 140–150, midpoint 145 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-21: 200–220, midpoint 210 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-22: 210–220, midpoint 215 LKR/kg · unverified\"'\n    - generic: 2026-07-06\n    - generic: 2026-09-22\n  - list \"Price series\":\n    - listitem: Dambulla · කැරට් - නුවරඑළිය - Carrot - N\n  - paragraph: Historical range midpoint · unverified · LKR/kg\n  - generic \"Original observations\"\n  - heading \"Your cultivations\" [level=2]\n  - paragraph: A living picture of the season\n  - button \"View all\":\n    - text: View all\n  - button \"QA Carrot Price Journey Carrot · QA first land — main field · 1 acres active LKR 0 spent\":\n    - strong: QA Carrot Price Journey\n    - generic: Carrot · QA first land — main field · 1 acres\n    - generic: active\n    - generic: LKR 0 spent\n  - heading \"Where your money goes\" [level=2]\n  - paragraph: Actual costs · cash and imputed\n  - heading \"Every rupee has a story\" [level=3]\n  - paragraph: Record expenses to see how your cultivation costs are distributed.\n  - heading \"A little foresight\" [level=2]\n  - paragraph: Signals from your own records\n  - strong: Keep the season in perspective\n  - paragraph: LKR 0 / LKR 10,000 · Cash budget recorded. Review remaining work before committing more spending.\n  - button \"Explore decision support\":\n    - text: Explore decision support\n  - generic: Saleable harvest\n  - strong: 0 kg\n  - generic: Unsold harvest\n  - strong: 0 kg\n  - heading \"Recent records\" [level=2]\n  - paragraph: The latest work, as it happens\n  - heading \"A fresh page\" [level=3]\n  - paragraph: Activities, costs, harvests and sales appear here as you add them.\n  - text: Based on your recorded actuals. Funding, imputed costs and forecasts stay separate.\n  - text: Farmwise\n  - generic: Made for decisions grounded in your records.\n  - generic: LKR · kg · acres · Asia/Colombo\n- alert",
+      "unitCostCount": 0
+    },
+    {
+      "step": "Costs present but no harvest",
+      "costLabel": 0,
+      "snapshot": "- complementary:\n  - text: Farm\n  - generic: wise\n  - generic: ®\n  - generic: FARM WORKSPACE\n  - navigation \"Main navigation\":\n    - button \"Overview\" [active]:\n      - text: Overview\n    - button \"Cultivations 1\":\n      - text: Cultivations\n      - generic: \"1\"\n    - button \"Land records\":\n      - text: Land records\n    - button \"Activities & labour\":\n      - text: Activities & labour\n    - button \"Expenses & receipts\":\n      - text: Expenses & receipts\n    - button \"Funding & budgets\":\n      - text: Funding & budgets\n    - generic: INSIGHTS & TOOLS\n    - button \"Harvests & sales\":\n      - text: Harvests & sales\n    - button \"Historical prices\":\n      - text: Historical prices\n    - button \"Decision support\":\n      - text: Decision support\n    - button \"Reports & exports\":\n      - text: Reports & exports\n    - button \"Administration\":\n      - text: Administration\n  - text: Local workspace\n  - generic: Persistent data\n  - generic: සA\n  - strong: සිංහල API QA\n  - generic: Independent farmer\n  - button \"Sign out\":\n- link \"Skip to content\":\n  - /url: \"#workspace-content\"\n- main:\n  - text: Workspace\n  - strong: Overview\n  - generic: Language / සිංහල\n  - combobox \"Language / භාෂාව\":\n    - option \"English\" [selected]\n    - option \"සිංහල\"\n  - generic: 18 Oct 2026\n  - button \"Add record\":\n    - generic: Add record\n  - generic: YOUR SEASON, AT A GLANCE\n  - heading \"A clearer view of your farm.\" [level=1]\n  - paragraph: Follow the work, understand the costs, plan what comes next.\n  - generic: Cultivation\n  - combobox \"Cultivation\":\n    - option \"All accessible cultivations\"\n    - option \"QA Carrot Price Journey\" [selected]\n  - article:\n    - generic: Cash cultivation costs\n    - strong: LKR 1,000\n    - generic: Actual cash costs, recorded once\n  - article:\n    - generic: Sales revenue\n    - strong: LKR 0\n    - generic: LKR 0 payments received\n  - article:\n    - generic: Economic profit / loss\n    - strong: \"-LKR 1,000\"\n    - generic: Sales less cash and imputed costs\n  - article:\n    - generic: Budget remaining\n    - strong: LKR 9,000\n    - generic: 10% of cash budget used\n  - heading \"Previous prices for your crop\" [level=2]\n  - paragraph: Carrot\n  - paragraph: Historical prices are unverified reference ranges, not today's selling price or a prediction. Original variants and markets remain separate.\n  - generic: Product / original variant\n  - combobox \"Product / original variant\":\n    - option \"Carrot\"\n    - option \"Carrots\"\n    - option \"නුවරඑළිය - Carrot - N\" [selected]\n  - generic: Claimed market\n  - combobox \"Claimed market\":\n    - option \"All markets\" [selected]\n    - option \"Dambulla\"\n    - option \"Thabuththegama\"\n  - img \"Historical range midpoints over actual calendar dates\":\n    - generic: \"288\"\n    - generic: \"200\"\n    - generic: \"112\"\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-06: 120–220, midpoint 170 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-07: 200–240, midpoint 220 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-17: 200–220, midpoint 210 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-31: 260–260, midpoint 260 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-08-05: 280–280, midpoint 280 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-08-06: 220–280, midpoint 250 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-08-12: 180–230, midpoint 205 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-07: 160–200, midpoint 180 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-08: 170–250, midpoint 210 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-11: 140–150, midpoint 145 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-21: 200–220, midpoint 210 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-22: 210–220, midpoint 215 LKR/kg · unverified\"'\n    - generic: 2026-07-06\n    - generic: 2026-09-22\n  - list \"Price series\":\n    - listitem: Dambulla · කැරට් - නුවරඑළිය - Carrot - N\n  - paragraph: Historical range midpoint · unverified · LKR/kg\n  - generic \"Original observations\"\n  - heading \"Your cultivations\" [level=2]\n  - paragraph: A living picture of the season\n  - button \"View all\":\n    - text: View all\n  - button \"QA Carrot Price Journey Carrot · QA first land — main field · 1 acres active LKR 1,000 spent\":\n    - strong: QA Carrot Price Journey\n    - generic: Carrot · QA first land — main field · 1 acres\n    - generic: active\n    - generic: LKR 1,000 spent\n  - heading \"Where your money goes\" [level=2]\n  - paragraph: Actual costs · cash and imputed\n  - generic: Seeds\n  - strong: LKR 1,000\n  - generic: 100% of recorded costs\n  - heading \"A little foresight\" [level=2]\n  - paragraph: Signals from your own records\n  - strong: Keep the season in perspective\n  - paragraph: LKR 1,000 / LKR 10,000 · Cash budget recorded. Review remaining work before committing more spending.\n  - button \"Explore decision support\":\n    - text: Explore decision support\n  - generic: Saleable harvest\n  - strong: 0 kg\n  - generic: Unsold harvest\n  - strong: 0 kg\n  - heading \"Recent records\" [level=2]\n  - paragraph: The latest work, as it happens\n  - strong: QA Unit cost seeds\n  - generic: expense · 2026-10-18\n  - generic: LKR 1,000\n  - text: Based on your recorded actuals. Funding, imputed costs and forecasts stay separate.\n  - text: Farmwise\n  - generic: Made for decisions grounded in your records.\n  - generic: LKR · kg · acres · Asia/Colombo\n- status:\n  - text: Saved. Your totals are up to date.\n- alert"
+    },
+    {
+      "step": "First saleable harvest: 1000 / 10 = 100 LKR/kg",
+      "text": "Saleable harvest\n10 kg\nUnsold harvest\n10 kg\nCost per kg so far\nLKR 100"
+    },
+    {
+      "step": "Cash + imputed costs / multiple harvests: 1500 / 15 = 100",
+      "text": "Saleable harvest\n15 kg\nUnsold harvest\n15 kg\nCost per kg so far\nLKR 100"
+    },
+    {
+      "step": "Final label after closure",
+      "snapshot": "- complementary:\n  - text: Farm\n  - generic: wise\n  - generic: ®\n  - generic: FARM WORKSPACE\n  - navigation \"Main navigation\":\n    - button \"Overview\":\n      - text: Overview\n    - button \"Cultivations 1\":\n      - text: Cultivations\n      - generic: \"1\"\n    - button \"Land records\":\n      - text: Land records\n    - button \"Activities & labour\":\n      - text: Activities & labour\n    - button \"Expenses & receipts\":\n      - text: Expenses & receipts\n    - button \"Funding & budgets\":\n      - text: Funding & budgets\n    - generic: INSIGHTS & TOOLS\n    - button \"Harvests & sales\":\n      - text: Harvests & sales\n    - button \"Historical prices\":\n      - text: Historical prices\n    - button \"Decision support\":\n      - text: Decision support\n    - button \"Reports & exports\":\n      - text: Reports & exports\n    - button \"Administration\":\n      - text: Administration\n  - text: Local workspace\n  - generic: Persistent data\n  - generic: සA\n  - strong: සිංහල API QA\n  - generic: Independent farmer\n  - button \"Sign out\":\n- link \"Skip to content\":\n  - /url: \"#workspace-content\"\n- main:\n  - text: Workspace\n  - strong: Cultivations\n  - generic: Language / සිංහල\n  - combobox \"Language / භාෂාව\":\n    - option \"English\" [selected]\n    - option \"සිංහල\"\n  - generic: 18 Oct 2026\n  - button \"Add record\":\n    - generic: Add record\n  - generic: FARMWISE / Cultivations\n  - heading \"Cultivations\" [level=1]\n  - paragraph: A dependable record of each season, from field to sale.\n  - generic: Cultivation\n  - combobox \"Cultivation\":\n    - option \"All accessible cultivations\"\n    - option \"QA Carrot Price Journey\" [selected]\n  - paragraph: 1 accessible cultivations · personal calculations in every district\n  - button \"Register land\"\n  - button \"Add field\"\n  - button \"New cultivation\":\n    - text: New cultivation\n  - button \"All cultivations\":\n    - text: All cultivations\n  - generic: closed\n  - heading \"QA Carrot Price Journey\" [level=2]\n  - paragraph: Carrot · QA carrot variety · QA first land / QA first land — main field\n  - text: QA District · 1 acres (0.405 ha)\n  - generic: Expected harvest\n  - strong: 2026-12-31\n  - generic: Planted 2026-10-18\n  - article:\n    - generic: Economic cost\n    - strong: LKR 1,500\n    - generic: Cash + imputed costs\n  - article:\n    - generic: Sales revenue\n    - strong: LKR 0\n    - generic: Agreed sale value\n  - article:\n    - generic: Budget\n    - strong: LKR 10,000\n    - generic: 100 kg forecast yield\n  - article:\n    - generic: Final cost per kg\n    - strong: LKR 100\n    - generic: Uses actual saleable harvest\n  - heading \"Previous prices for your crop\" [level=2]\n  - paragraph: Carrot\n  - paragraph: Historical prices are unverified reference ranges, not today's selling price or a prediction. Original variants and markets remain separate.\n  - generic: Product / original variant\n  - combobox \"Product / original variant\":\n    - option \"Carrot\"\n    - option \"Carrots\"\n    - option \"නුවරඑළිය - Carrot - N\" [selected]\n  - generic: Claimed market\n  - combobox \"Claimed market\":\n    - option \"All markets\" [selected]\n    - option \"Dambulla\"\n    - option \"Thabuththegama\"\n  - img \"Historical range midpoints over actual calendar dates\":\n    - generic: \"288\"\n    - generic: \"200\"\n    - generic: \"112\"\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-06: 120–220, midpoint 170 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-07: 200–240, midpoint 220 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-17: 200–220, midpoint 210 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-31: 260–260, midpoint 260 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-08-05: 280–280, midpoint 280 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-08-06: 220–280, midpoint 250 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-08-12: 180–230, midpoint 205 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-07: 160–200, midpoint 180 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-08: 170–250, midpoint 210 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-11: 140–150, midpoint 145 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-21: 200–220, midpoint 210 LKR/kg · unverified\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-22: 210–220, midpoint 215 LKR/kg · unverified\"'\n    - generic: 2026-07-06\n    - generic: 2026-09-22\n  - list \"Price series\":\n    - listitem: Dambulla · කැරට් - නුවරඑළිය - Carrot - N\n  - paragraph: Historical range midpoint · unverified · LKR/kg\n  - generic \"Original observations\"\n  - heading \"Cultivation controls\" [level=2]\n  - paragraph: Ownership and sensitive settings\n  - generic: Benchmark policy\n  - generic: Outside reference area\n  - generic: Record validation\n  - generic: Not validated\n  - paragraph: Personal calculations are always available. Benchmark inclusion also needs closure, administrator validation and enough independent records.\n  - button \"Edit cultivation details\"\n  - button \"Edit budget, forecast & status\" [active]\n  - heading \"Season record\" [level=2]\n  - paragraph: All live entries in this cultivation\n  - table:\n    - rowgroup:\n      - row \"Date Type Description Value\":\n        - columnheader \"Date\"\n        - columnheader \"Type\"\n        - columnheader \"Description\"\n        - columnheader \"Value\"\n    - rowgroup:\n      - row \"2026-10-18 harvest QA Unit harvest two 5 kg harvested\":\n        - cell \"2026-10-18\"\n        - cell \"harvest\":\n          - generic: harvest\n        - cell \"QA Unit harvest two\"\n        - cell \"5 kg harvested\"\n      - row \"2026-10-18 expense QA Unit family labour LKR 500\":\n        - cell \"2026-10-18\"\n        - cell \"expense\":\n          - generic: expense\n        - cell \"QA Unit family labour\"\n        - cell \"LKR 500\"\n      - row \"2026-10-18 harvest QA Unit harvest one 12 kg harvested\":\n        - cell \"2026-10-18\"\n        - cell \"harvest\":\n          - generic: harvest\n        - cell \"QA Unit harvest one\"\n        - cell \"12 kg harvested\"\n      - row \"2026-10-18 expense QA Unit cost seeds LKR 1,000\":\n        - cell \"2026-10-18\"\n        - cell \"expense\":\n          - generic: expense\n        - cell \"QA Unit cost seeds\"\n        - cell \"LKR 1,000\"\n  - heading \"Farms & fields\" [level=2]\n  - paragraph: Physical locations behind your cultivations\n  - strong: QA first land\n  - generic: QA District\n  - button \"Edit farm\"\n  - table:\n    - rowgroup:\n      - row \"Farm District Field Area\":\n        - columnheader \"Farm\"\n        - columnheader \"District\"\n        - columnheader \"Field\"\n        - columnheader \"Area\"\n        - columnheader\n    - rowgroup:\n      - row \"QA first land QA District QA first land — main field 2 acres Edit field\":\n        - cell \"QA first land\"\n        - cell \"QA District\"\n        - cell \"QA first land — main field\"\n        - cell \"2 acres\"\n        - cell \"Edit field\":\n          - button \"Edit field\"\n  - text: Farmwise\n  - generic: Made for decisions grounded in your records.\n  - generic: LKR · kg · acres · Asia/Colombo\n- status:\n  - text: Saved. Your totals are up to date.\n- alert"
+    },
+    {
+      "step": "Carrot alias with excluded-only data",
+      "snapshot": "- complementary:\n  - text: Farm\n  - generic: wise\n  - generic: ®\n  - generic: FARM WORKSPACE\n  - navigation \"Main navigation\":\n    - button \"Overview\":\n      - text: Overview\n    - button \"Cultivations 1\":\n      - text: Cultivations\n      - generic: \"1\"\n    - button \"Land records\":\n      - text: Land records\n    - button \"Activities & labour\":\n      - text: Activities & labour\n    - button \"Expenses & receipts\":\n      - text: Expenses & receipts\n    - button \"Funding & budgets\":\n      - text: Funding & budgets\n    - generic: INSIGHTS & TOOLS\n    - button \"Harvests & sales\":\n      - text: Harvests & sales\n    - button \"Historical prices\" [active]:\n      - text: Historical prices\n    - button \"Decision support\":\n      - text: Decision support\n    - button \"Reports & exports\":\n      - text: Reports & exports\n    - button \"Administration\":\n      - text: Administration\n  - text: Local workspace\n  - generic: Persistent data\n  - generic: සA\n  - strong: සිංහල API QA\n  - generic: Independent farmer\n  - button \"Sign out\":\n- link \"Skip to content\":\n  - /url: \"#workspace-content\"\n- main:\n  - text: Workspace\n  - strong: Historical prices\n  - generic: Language / සිංහල\n  - combobox \"Language / භාෂාව\":\n    - option \"English\" [selected]\n    - option \"සිංහල\"\n  - generic: 18 Oct 2026\n  - button \"Add record\":\n    - generic: Add record\n  - generic: FARMWISE / Historical prices\n  - heading \"Historical prices\" [level=1]\n  - paragraph: Original price-list ranges. Historical context for your next decision.\n  - generic: Cultivation\n  - combobox \"Cultivation\":\n    - option \"All accessible cultivations\"\n    - option \"QA Carrot Price Journey\" [selected]\n  - strong: Historical records, not live market prices\n  - paragraph: 1,950 observations from two candidate workbooks. All imported prices are unverified. Units are LKR/kg per workbook notes; original-source confirmation is pending. No grapes data is available.\n  - paragraph: \"Selected cultivation crop: Carrot · Original variants are kept separate. You can explore other products below.\"\n  - generic: Product / original variant\n  - combobox \"Product / original variant\":\n    - option \"Ambarella\"\n    - option \"Ambun Banana\"\n    - option \"Ash Plantain\"\n    - option \"Athugowa\"\n    - option \"Avocado\"\n    - option \"Banana - Ambul\"\n    - option \"Banana - Sini\"\n    - option \"Basil\"\n    - option \"Beans\"\n    - option \"Beetroot\"\n    - option \"Beetroot (Cut)\"\n    - option \"Bitter Gourd\"\n    - option \"Brinjal\"\n    - option \"Broccoli\"\n    - option \"Butternut Squash\"\n    - option \"Cabbage\"\n    - option \"Cabbage - Chinese\"\n    - option \"Cabbage red\"\n    - option \"Capsicum\"\n    - option \"Carrot\" [selected]\n    - option \"Carrots\"\n    - option \"Cauliflower\"\n    - option \"Celery\"\n    - option \"Chaw - Chaw\"\n    - option \"Coconut\"\n    - option \"Cooking Melon\"\n    - option \"Coriander leaves\"\n    - option \"Corns\"\n    - option \"Cowpea\"\n    - option \"Cucumber\"\n    - option \"Cucumber green\"\n    - option \"Curry Leaves\"\n    - option \"Drumsticks\"\n    - option \"Dry Chilies\"\n    - option \"Eggplant\"\n    - option \"Finger Millet\"\n    - option \"Garlic\"\n    - option \"Gherkin\"\n    - option \"Ginger\"\n    - option \"Gooseberry\"\n    - option \"Gotukola\"\n    - option \"Gram\"\n    - option \"Green Chili\"\n    - option \"Green Gram\"\n    - option \"Guava\"\n    - option \"Iceberg\"\n    - option \"Indian bael\"\n    - option \"Jackfruit\"\n    - option \"King Coconut\"\n    - option \"Kiriala\"\n    - option \"Knol khol\"\n    - option \"Kohila\"\n    - option \"Kolikuttu\"\n    - option \"Lady's Fingers\"\n    - option \"Leeks\"\n    - option \"Lettuce\"\n    - option \"Lettuce - Red\"\n    - option \"Lime\"\n    - option \"Long radish\"\n    - option \"Lotus Roots\"\n    - option \"Mango\"\n    - option \"Mango - Mal Amba\"\n    - option \"Manioc\"\n    - option \"Mint Leaves\"\n    - option \"Mint leaves\"\n    - option \"Mukunuwenna\"\n    - option \"Nai Miris\"\n    - option \"Onion Leaves\"\n    - option \"Pak choy\"\n    - option \"Papaya\"\n    - option \"Parsley\"\n    - option \"Passion\"\n    - option \"Peanuts\"\n    - option \"Pineapple\"\n    - option \"Plantain Flower\"\n    - option \"Potatoes\"\n    - option \"Potatoes red\"\n    - option \"Radish\"\n    - option \"Radish - red\"\n    - option \"Red Cabbage\"\n    - option \"Rhubarb\"\n    - option \"Ridge Gourd\"\n    - option \"Rosemary\"\n    - option \"Sesame\"\n    - option \"Snake Gourd\"\n    - option \"Soursop\"\n    - option \"Soya Bean\"\n    - option \"Spinach\"\n    - option \"Sweet Potato\"\n    - option \"TJC\"\n    - option \"Tamarind\"\n    - option \"Thai Eggplant\"\n    - option \"Thithbatu\"\n    - option \"Thumbakarawila\"\n    - option \"Tomato\"\n    - option \"Tomato (greenhouse)\"\n    - option \"Turmeric\"\n    - option \"Water Spinach\"\n    - option \"Watermelon\"\n    - option \"Wild Baby Potato\"\n    - option \"Winged Bean\"\n    - option \"Woodapple\"\n    - option \"Yard - Long Beans\"\n    - option \"ආනයනික - B Onion Import\"\n    - option \"ආනයනික - Potatoes Import\"\n    - option \"ආනයනික - Red Onion Import\"\n    - option \"කහ - Pepper - Y\"\n    - option \"කහ - Pepper - Yellow\"\n    - option \"කහ - Zucchini - yellow\"\n    - option \"කොළ - Pepper - G\"\n    - option \"කොළ - Pepper - Green\"\n    - option \"කොළ - Zucchini - green\"\n    - option \"දඹුල්ල - Beetroot Cut - D\"\n    - option \"නුවරඑළිය - Beetroot N\"\n    - option \"නුවරඑළිය - Carrot - N\"\n    - option \"නුවරඑළිය - Cauliflower N/E\"\n    - option \"නුවරඑළිය - Potatoes N\"\n    - option \"පුත්තලම - Beetroot Cut - P\"\n    - option \"මල්ලිපු - Beetroot Cut - M\"\n    - option \"මෙලන් - Pumpkin - Melon\"\n    - option \"යාපනය - Beetroot Cut - J\"\n    - option \"රතු - Pepper - R\"\n    - option \"රතු - Pepper - Red\"\n    - option \"ලංකා - B Onion Lanka\"\n    - option \"ලංකා - Red Onion - Lanka\"\n    - option \"වැලිමඩ - Potatoes W\"\n  - generic: Claimed market\n  - combobox \"Claimed market\":\n    - option \"All markets\" [selected]\n    - option \"Dambulla\"\n    - option \"Thabuththegama\"\n  - checkbox \"Show flagged original records\"\n  - text: Show flagged original records\n  - heading \"Carrot · All markets\" [level=2]\n  - paragraph: Historical range midpoint · unverified · LKR/kg\n  - status: Records exist, but their prices are missing, incomplete, reversed or have uncertain market identity. Review the original records below; no prices have been invented.\n  - heading \"No usable price diagram\" [level=3]\n  - paragraph: A chart needs complete price bounds with clear market identity. Available original records are shown separately.\n  - generic: Chart uses complete, ordered bounds with no market-identity flag. Midpoints are arithmetic range midpoints, not transactions. Time spacing reflects actual dates.\n  - paragraph: \"Dambulla-labelled data from 24 September 2026 uses Keppetipola forms: market identity uncertain. Eight reversed ranges are preserved for review. Partial ranges have no midpoint. No source values have been corrected.\"\n  - heading \"Original observations\" [level=2]\n  - paragraph: 6 / 6 · records for this selection\n  - table:\n    - rowgroup:\n      - row \"Date Original product label Market identity Lower / upper Midpoint Source / status\":\n        - columnheader \"Date\"\n        - columnheader \"Original product label\"\n        - columnheader \"Market identity\"\n        - columnheader \"Lower / upper\"\n        - columnheader \"Midpoint\"\n        - columnheader \"Source / status\"\n    - rowgroup:\n      - row \"2026-10-07 කැරට් - Carrot Vegetables Uncertain (Dambulla / Keppetipola) Excluded from chart 130 / 150 Not calculated unverified dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AR105:AS105\":\n        - cell \"2026-10-07\"\n        - cell \"කැරට් - Carrot Vegetables\":\n          - text: කැරට් - Carrot\n          - generic: Vegetables\n        - cell \"Uncertain (Dambulla / Keppetipola) Excluded from chart\":\n          - text: Uncertain (Dambulla / Keppetipola)\n          - generic: Excluded from chart\n        - cell \"130 / 150\"\n        - cell \"Not calculated\"\n        - cell \"unverified dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AR105:AS105\":\n          - generic: unverified\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!AR105:AS105\n      - row \"2026-10-06 කැරට් - Carrot Vegetables Uncertain (Dambulla / Keppetipola) Excluded from chart 130 / 180 Not calculated unverified dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AP105:AQ105\":\n        - cell \"2026-10-06\"\n        - cell \"කැරට් - Carrot Vegetables\":\n          - text: කැරට් - Carrot\n          - generic: Vegetables\n        - cell \"Uncertain (Dambulla / Keppetipola) Excluded from chart\":\n          - text: Uncertain (Dambulla / Keppetipola)\n          - generic: Excluded from chart\n        - cell \"130 / 180\"\n        - cell \"Not calculated\"\n        - cell \"unverified dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AP105:AQ105\":\n          - generic: unverified\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!AP105:AQ105\n      - row \"2026-10-05 කැරට් - Carrot Vegetables Uncertain (Dambulla / Keppetipola) Excluded from chart 120 / 180 Not calculated unverified dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AN105:AO105\":\n        - cell \"2026-10-05\"\n        - cell \"කැරට් - Carrot Vegetables\":\n          - text: කැරට් - Carrot\n          - generic: Vegetables\n        - cell \"Uncertain (Dambulla / Keppetipola) Excluded from chart\":\n          - text: Uncertain (Dambulla / Keppetipola)\n          - generic: Excluded from chart\n        - cell \"120 / 180\"\n        - cell \"Not calculated\"\n        - cell \"unverified dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AN105:AO105\":\n          - generic: unverified\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!AN105:AO105\n      - row \"2026-09-29 කැරට් - Carrot Vegetables Uncertain (Dambulla / Keppetipola) Excluded from chart 110 / 150 Not calculated unverified dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AL105:AM105\":\n        - cell \"2026-09-29\"\n        - cell \"කැරට් - Carrot Vegetables\":\n          - text: කැරට් - Carrot\n          - generic: Vegetables\n        - cell \"Uncertain (Dambulla / Keppetipola) Excluded from chart\":\n          - text: Uncertain (Dambulla / Keppetipola)\n          - generic: Excluded from chart\n        - cell \"110 / 150\"\n        - cell \"Not calculated\"\n        - cell \"unverified dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AL105:AM105\":\n          - generic: unverified\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!AL105:AM105\n      - row \"2026-09-28 කැරට් - Carrot Vegetables Uncertain (Dambulla / Keppetipola) Excluded from chart 120 / 170 Not calculated unverified dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AJ105:AK105\":\n        - cell \"2026-09-28\"\n        - cell \"කැරට් - Carrot Vegetables\":\n          - text: කැරට් - Carrot\n          - generic: Vegetables\n        - cell \"Uncertain (Dambulla / Keppetipola) Excluded from chart\":\n          - text: Uncertain (Dambulla / Keppetipola)\n          - generic: Excluded from chart\n        - cell \"120 / 170\"\n        - cell \"Not calculated\"\n        - cell \"unverified dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AJ105:AK105\":\n          - generic: unverified\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!AJ105:AK105\n      - row \"2026-09-24 කැරට් - Carrot Vegetables Uncertain (Dambulla / Keppetipola) Excluded from chart 100 / 150 Not calculated unverified dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AH105:AI105\":\n        - cell \"2026-09-24\"\n        - cell \"කැරට් - Carrot Vegetables\":\n          - text: කැරට් - Carrot\n          - generic: Vegetables\n        - cell \"Uncertain (Dambulla / Keppetipola) Excluded from chart\":\n          - text: Uncertain (Dambulla / Keppetipola)\n          - generic: Excluded from chart\n        - cell \"100 / 150\"\n        - cell \"Not calculated\"\n        - cell \"unverified dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AH105:AI105\":\n          - generic: unverified\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!AH105:AI105\n  - button \"Previous\" [disabled]\n  - generic: Page 1 of 1\n  - button \"Next\" [disabled]\n  - text: Farmwise\n  - generic: Made for decisions grounded in your records.\n  - generic: LKR · kg · acres · Asia/Colombo\n- alert"
+    },
+    {
+      "step": "Single-point chart",
+      "circles": 1,
+      "lines": 0
+    },
+    {
+      "step": "Switch cultivation to Grapes",
+      "snapshot": "- complementary:\n  - text: Farm\n  - generic: wise\n  - generic: ®\n  - generic: FARM WORKSPACE\n  - navigation \"Main navigation\":\n    - button \"Overview\":\n      - text: Overview\n    - button \"Cultivations 2\":\n      - text: Cultivations\n      - generic: \"2\"\n    - button \"Land records\":\n      - text: Land records\n    - button \"Activities & labour\":\n      - text: Activities & labour\n    - button \"Expenses & receipts\":\n      - text: Expenses & receipts\n    - button \"Funding & budgets\":\n      - text: Funding & budgets\n    - generic: INSIGHTS & TOOLS\n    - button \"Harvests & sales\":\n      - text: Harvests & sales\n    - button \"Historical prices\" [active]:\n      - text: Historical prices\n    - button \"Decision support\":\n      - text: Decision support\n    - button \"Reports & exports\":\n      - text: Reports & exports\n    - button \"Administration\":\n      - text: Administration\n  - text: Local workspace\n  - generic: Persistent data\n  - generic: සA\n  - strong: සිංහල API QA\n  - generic: Independent farmer\n  - button \"Sign out\":\n- link \"Skip to content\":\n  - /url: \"#workspace-content\"\n- main:\n  - text: Workspace\n  - strong: Historical prices\n  - generic: Language / සිංහල\n  - combobox \"Language / භාෂාව\":\n    - option \"English\" [selected]\n    - option \"සිංහල\"\n  - generic: 18 Oct 2026\n  - button \"Add record\":\n    - generic: Add record\n  - generic: FARMWISE / Historical prices\n  - heading \"Historical prices\" [level=1]\n  - paragraph: Original price-list ranges. Historical context for your next decision.\n  - generic: Cultivation\n  - combobox \"Cultivation\":\n    - option \"All accessible cultivations\"\n    - option \"QA Carrot Price Journey\"\n    - option \"QA Grapes Missing History\" [selected]\n  - strong: Historical records, not live market prices\n  - paragraph: 1,950 observations from two candidate workbooks. All imported prices are unverified. Units are LKR/kg per workbook notes; original-source confirmation is pending. No grapes data is available.\n  - paragraph: \"Selected cultivation crop: Grapes · Original variants are kept separate. You can explore other products below.\"\n  - generic: Product / original variant\n  - combobox \"Product / original variant\":\n    - option \"Ambarella\"\n    - option \"Ambun Banana\"\n    - option \"Ash Plantain\"\n    - option \"Athugowa\"\n    - option \"Avocado\"\n    - option \"Banana - Ambul\"\n    - option \"Banana - Sini\"\n    - option \"Basil\"\n    - option \"Beans\"\n    - option \"Beetroot\"\n    - option \"Beetroot (Cut)\"\n    - option \"Bitter Gourd\"\n    - option \"Brinjal\"\n    - option \"Broccoli\"\n    - option \"Butternut Squash\"\n    - option \"Cabbage\"\n    - option \"Cabbage - Chinese\"\n    - option \"Cabbage red\"\n    - option \"Capsicum\"\n    - option \"Carrot\"\n    - option \"Carrots\"\n    - option \"Cauliflower\"\n    - option \"Celery\"\n    - option \"Chaw - Chaw\"\n    - option \"Coconut\"\n    - option \"Cooking Melon\"\n    - option \"Coriander leaves\"\n    - option \"Corns\"\n    - option \"Cowpea\"\n    - option \"Cucumber\"\n    - option \"Cucumber green\"\n    - option \"Curry Leaves\"\n    - option \"Drumsticks\"\n    - option \"Dry Chilies\"\n    - option \"Eggplant\"\n    - option \"Finger Millet\"\n    - option \"Garlic\"\n    - option \"Gherkin\"\n    - option \"Ginger\"\n    - option \"Gooseberry\"\n    - option \"Gotukola\"\n    - option \"Gram\"\n    - option \"Grapes\" [selected]\n    - option \"Green Chili\"\n    - option \"Green Gram\"\n    - option \"Guava\"\n    - option \"Iceberg\"\n    - option \"Indian bael\"\n    - option \"Jackfruit\"\n    - option \"King Coconut\"\n    - option \"Kiriala\"\n    - option \"Knol khol\"\n    - option \"Kohila\"\n    - option \"Kolikuttu\"\n    - option \"Lady's Fingers\"\n    - option \"Leeks\"\n    - option \"Lettuce\"\n    - option \"Lettuce - Red\"\n    - option \"Lime\"\n    - option \"Long radish\"\n    - option \"Lotus Roots\"\n    - option \"Mango\"\n    - option \"Mango - Mal Amba\"\n    - option \"Manioc\"\n    - option \"Mint Leaves\"\n    - option \"Mint leaves\"\n    - option \"Mukunuwenna\"\n    - option \"Nai Miris\"\n    - option \"Onion Leaves\"\n    - option \"Pak choy\"\n    - option \"Papaya\"\n    - option \"Parsley\"\n    - option \"Passion\"\n    - option \"Peanuts\"\n    - option \"Pineapple\"\n    - option \"Plantain Flower\"\n    - option \"Potatoes\"\n    - option \"Potatoes red\"\n    - option \"Radish\"\n    - option \"Radish - red\"\n    - option \"Red Cabbage\"\n    - option \"Rhubarb\"\n    - option \"Ridge Gourd\"\n    - option \"Rosemary\"\n    - option \"Sesame\"\n    - option \"Snake Gourd\"\n    - option \"Soursop\"\n    - option \"Soya Bean\"\n    - option \"Spinach\"\n    - option \"Sweet Potato\"\n    - option \"TJC\"\n    - option \"Tamarind\"\n    - option \"Thai Eggplant\"\n    - option \"Thithbatu\"\n    - option \"Thumbakarawila\"\n    - option \"Tomato\"\n    - option \"Tomato (greenhouse)\"\n    - option \"Turmeric\"\n    - option \"Water Spinach\"\n    - option \"Watermelon\"\n    - option \"Wild Baby Potato\"\n    - option \"Winged Bean\"\n    - option \"Woodapple\"\n    - option \"Yard - Long Beans\"\n    - option \"ආනයනික - B Onion Import\"\n    - option \"ආනයනික - Potatoes Import\"\n    - option \"ආනයනික - Red Onion Import\"\n    - option \"කහ - Pepper - Y\"\n    - option \"කහ - Pepper - Yellow\"\n    - option \"කහ - Zucchini - yellow\"\n    - option \"කොළ - Pepper - G\"\n    - option \"කොළ - Pepper - Green\"\n    - option \"කොළ - Zucchini - green\"\n    - option \"දඹුල්ල - Beetroot Cut - D\"\n    - option \"නුවරඑළිය - Beetroot N\"\n    - option \"නුවරඑළිය - Carrot - N\"\n    - option \"නුවරඑළිය - Cauliflower N/E\"\n    - option \"නුවරඑළිය - Potatoes N\"\n    - option \"පුත්තලම - Beetroot Cut - P\"\n    - option \"මල්ලිපු - Beetroot Cut - M\"\n    - option \"මෙලන් - Pumpkin - Melon\"\n    - option \"යාපනය - Beetroot Cut - J\"\n    - option \"රතු - Pepper - R\"\n    - option \"රතු - Pepper - Red\"\n    - option \"ලංකා - B Onion Lanka\"\n    - option \"ලංකා - Red Onion - Lanka\"\n    - option \"වැලිමඩ - Potatoes W\"\n  - generic: Claimed market\n  - combobox \"Claimed market\":\n    - option \"All markets\" [selected]\n    - option \"Dambulla\"\n    - option \"Thabuththegama\"\n  - checkbox \"Show flagged original records\"\n  - text: Show flagged original records\n  - heading \"Grapes · All markets\" [level=2]\n  - paragraph: Historical range midpoint · unverified · LKR/kg\n  - status: No historical price records are available for this product and market. Try another market or product.\n  - heading \"No usable price diagram\" [level=3]\n  - paragraph: A chart needs complete price bounds with clear market identity. Available original records are shown separately.\n  - generic: Chart uses complete, ordered bounds with no market-identity flag. Midpoints are arithmetic range midpoints, not transactions. Time spacing reflects actual dates.\n  - paragraph: \"Dambulla-labelled data from 24 September 2026 uses Keppetipola forms: market identity uncertain. Eight reversed ranges are preserved for review. Partial ranges have no midpoint. No source values have been corrected.\"\n  - heading \"Original observations\" [level=2]\n  - paragraph: 0 / 0 · records for this selection\n  - table:\n    - rowgroup:\n      - row \"Date Original product label Market identity Lower / upper Midpoint Source / status\":\n        - columnheader \"Date\"\n        - columnheader \"Original product label\"\n        - columnheader \"Market identity\"\n        - columnheader \"Lower / upper\"\n        - columnheader \"Midpoint\"\n        - columnheader \"Source / status\"\n    - rowgroup\n  - paragraph: No original observations are available for this selection.\n  - button \"Previous\" [disabled]\n  - generic: Page 1 of 1\n  - button \"Next\" [disabled]\n  - text: Farmwise\n  - generic: Made for decisions grounded in your records.\n  - generic: LKR · kg · acres · Asia/Colombo\n- alert"
+    },
+    {
+      "step": "Separate market series",
+      "legend": "Thabuththegama · ගෝවා - Cabbage\nDambulla · ගෝවා - Cabbage"
+    },
+    {
+      "step": "Unit cost disappears after voiding last harvest",
+      "costLabelCount": 0,
+      "metrics": "Saleable harvest\n0 kg\nUnsold harvest\n0 kg"
+    }
+  ],
+  "chartSweep": [
+    {
+      "product": "Ambarella",
+      "invalidGeometry": false,
+      "points": 10,
+      "reason": ""
+    },
+    {
+      "product": "Ambun Banana",
+      "invalidGeometry": false,
+      "points": 11,
+      "reason": ""
+    },
+    {
+      "product": "Ash Plantain",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Athugowa",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Avocado",
+      "invalidGeometry": false,
+      "points": 11,
+      "reason": ""
+    },
+    {
+      "product": "Banana - Ambul",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "Banana - Sini",
+      "invalidGeometry": false,
+      "points": 12,
+      "reason": ""
+    },
+    {
+      "product": "Basil",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Beans",
+      "invalidGeometry": false,
+      "points": 16,
+      "reason": ""
+    },
+    {
+      "product": "Beetroot",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Beetroot (Cut)",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Bitter Gourd",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "Brinjal",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "Broccoli",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Butternut Squash",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "Cabbage",
+      "invalidGeometry": false,
+      "points": 20,
+      "reason": ""
+    },
+    {
+      "product": "Cabbage - Chinese",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Cabbage red",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Capsicum",
+      "invalidGeometry": false,
+      "points": 23,
+      "reason": ""
+    },
+    {
+      "product": "Carrot",
+      "invalidGeometry": false,
+      "points": 0,
+      "reason": "Records exist, but their prices are missing, incomplete, reversed or have uncertain market identity. Review the original records below; no prices have been invented."
+    },
+    {
+      "product": "Carrots",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Cauliflower",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Celery",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Chaw - Chaw",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Coconut",
+      "invalidGeometry": false,
+      "points": 12,
+      "reason": ""
+    },
+    {
+      "product": "Cooking Melon",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Coriander leaves",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Corns",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Cowpea",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "Cucumber",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Cucumber green",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Curry Leaves",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "Drumsticks",
+      "invalidGeometry": false,
+      "points": 12,
+      "reason": ""
+    },
+    {
+      "product": "Dry Chilies",
+      "invalidGeometry": false,
+      "points": 12,
+      "reason": ""
+    },
+    {
+      "product": "Eggplant",
+      "invalidGeometry": false,
+      "points": 10,
+      "reason": ""
+    },
+    {
+      "product": "Finger Millet",
+      "invalidGeometry": false,
+      "points": 11,
+      "reason": ""
+    },
+    {
+      "product": "Garlic",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Gherkin",
+      "invalidGeometry": false,
+      "points": 0,
+      "reason": "Records exist, but their prices are missing, incomplete, reversed or have uncertain market identity. Review the original records below; no prices have been invented."
+    },
+    {
+      "product": "Ginger",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Gooseberry",
+      "invalidGeometry": false,
+      "points": 12,
+      "reason": ""
+    },
+    {
+      "product": "Gotukola",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "Gram",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Grapes",
+      "invalidGeometry": false,
+      "points": 0,
+      "reason": "No historical price records are available for this product and market. Try another market or product."
+    },
+    {
+      "product": "Green Chili",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Green Gram",
+      "invalidGeometry": false,
+      "points": 12,
+      "reason": ""
+    },
+    {
+      "product": "Guava",
+      "invalidGeometry": false,
+      "points": 11,
+      "reason": ""
+    },
+    {
+      "product": "Iceberg",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Indian bael",
+      "invalidGeometry": false,
+      "points": 12,
+      "reason": ""
+    },
+    {
+      "product": "Jackfruit",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "King Coconut",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "Kiriala",
+      "invalidGeometry": false,
+      "points": 16,
+      "reason": ""
+    },
+    {
+      "product": "Knol khol",
+      "invalidGeometry": false,
+      "points": 19,
+      "reason": ""
+    },
+    {
+      "product": "Kohila",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "Kolikuttu",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Lady's Fingers",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "Leeks",
+      "invalidGeometry": false,
+      "points": 22,
+      "reason": ""
+    },
+    {
+      "product": "Lettuce",
+      "invalidGeometry": false,
+      "points": 24,
+      "reason": ""
+    },
+    {
+      "product": "Lettuce - Red",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Lime",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "Long radish",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Lotus Roots",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "Mango",
+      "invalidGeometry": false,
+      "points": 6,
+      "reason": ""
+    },
+    {
+      "product": "Mango - Mal Amba",
+      "invalidGeometry": false,
+      "points": 1,
+      "reason": "Only one usable price observation is available. It is shown as a point, not a price trend."
+    },
+    {
+      "product": "Manioc",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Mint Leaves",
+      "invalidGeometry": false,
+      "points": 0,
+      "reason": "Records exist, but their prices are missing, incomplete, reversed or have uncertain market identity. Review the original records below; no prices have been invented."
+    },
+    {
+      "product": "Mint leaves",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Mukunuwenna",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Nai Miris",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Onion Leaves",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Pak choy",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Papaya",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Parsley",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Passion",
+      "invalidGeometry": false,
+      "points": 11,
+      "reason": ""
+    },
+    {
+      "product": "Peanuts",
+      "invalidGeometry": false,
+      "points": 12,
+      "reason": ""
+    },
+    {
+      "product": "Pineapple",
+      "invalidGeometry": false,
+      "points": 12,
+      "reason": ""
+    },
+    {
+      "product": "Plantain Flower",
+      "invalidGeometry": false,
+      "points": 12,
+      "reason": ""
+    },
+    {
+      "product": "Potatoes",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Potatoes red",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Radish",
+      "invalidGeometry": false,
+      "points": 23,
+      "reason": ""
+    },
+    {
+      "product": "Radish - red",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Red Cabbage",
+      "invalidGeometry": false,
+      "points": 1,
+      "reason": "Only one usable price observation is available. It is shown as a point, not a price trend."
+    },
+    {
+      "product": "Rhubarb",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Ridge Gourd",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "Rosemary",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Sesame",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "Snake Gourd",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "Soursop",
+      "invalidGeometry": false,
+      "points": 6,
+      "reason": ""
+    },
+    {
+      "product": "Soya Bean",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "Spinach",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "Sweet Potato",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "TJC",
+      "invalidGeometry": false,
+      "points": 7,
+      "reason": ""
+    },
+    {
+      "product": "Tamarind",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "Thai Eggplant",
+      "invalidGeometry": false,
+      "points": 16,
+      "reason": ""
+    },
+    {
+      "product": "Thithbatu",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "Thumbakarawila",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "Tomato",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Tomato (greenhouse)",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Turmeric",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "Water Spinach",
+      "invalidGeometry": false,
+      "points": 6,
+      "reason": ""
+    },
+    {
+      "product": "Watermelon",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "Wild Baby Potato",
+      "invalidGeometry": false,
+      "points": 2,
+      "reason": ""
+    },
+    {
+      "product": "Winged Bean",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "Woodapple",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "Yard - Long Beans",
+      "invalidGeometry": false,
+      "points": 4,
+      "reason": ""
+    },
+    {
+      "product": "ආනයනික - B Onion Import",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "ආනයනික - Potatoes Import",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "ආනයනික - Red Onion Import",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "කහ - Pepper - Y",
+      "invalidGeometry": false,
+      "points": 0,
+      "reason": "Records exist, but their prices are missing, incomplete, reversed or have uncertain market identity. Review the original records below; no prices have been invented."
+    },
+    {
+      "product": "කහ - Pepper - Yellow",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "කහ - Zucchini - yellow",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "කොළ - Pepper - G",
+      "invalidGeometry": false,
+      "points": 0,
+      "reason": "Records exist, but their prices are missing, incomplete, reversed or have uncertain market identity. Review the original records below; no prices have been invented."
+    },
+    {
+      "product": "කොළ - Pepper - Green",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "කොළ - Zucchini - green",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "දඹුල්ල - Beetroot Cut - D",
+      "invalidGeometry": false,
+      "points": 11,
+      "reason": ""
+    },
+    {
+      "product": "නුවරඑළිය - Beetroot N",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "නුවරඑළිය - Carrot - N",
+      "invalidGeometry": false,
+      "points": 12,
+      "reason": ""
+    },
+    {
+      "product": "නුවරඑළිය - Cauliflower N/E",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "නුවරඑළිය - Potatoes N",
+      "invalidGeometry": false,
+      "points": 14,
+      "reason": ""
+    },
+    {
+      "product": "පුත්තලම - Beetroot Cut - P",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "මල්ලිපු - Beetroot Cut - M",
+      "invalidGeometry": false,
+      "points": 13,
+      "reason": ""
+    },
+    {
+      "product": "මෙලන් - Pumpkin - Melon",
+      "invalidGeometry": false,
+      "points": 15,
+      "reason": ""
+    },
+    {
+      "product": "යාපනය - Beetroot Cut - J",
+      "invalidGeometry": false,
+      "points": 10,
+      "reason": ""
+    },
+    {
+      "product": "රතු - Pepper - R",
+      "invalidGeometry": false,
+      "points": 0,
+      "reason": "Records exist, but their prices are missing, incomplete, reversed or have uncertain market identity. Review the original records below; no prices have been invented."
+    },
+    {
+      "product": "රතු - Pepper - Red",
+      "invalidGeometry": false,
+      "points": 9,
+      "reason": ""
+    },
+    {
+      "product": "ලංකා - B Onion Lanka",
+      "invalidGeometry": false,
+      "points": 5,
+      "reason": ""
+    },
+    {
+      "product": "ලංකා - Red Onion - Lanka",
+      "invalidGeometry": false,
+      "points": 16,
+      "reason": ""
+    },
+    {
+      "product": "වැලිමඩ - Potatoes W",
+      "invalidGeometry": false,
+      "points": 7,
+      "reason": ""
+    }
+  ],
+  "roles": [
+    {
+      "email": "qa-owner@example.test",
+      "cropHistory": 1,
+      "unitCost": 1
+    },
+    {
+      "email": "qa-supervisor@example.test",
+      "cropHistory": 1,
+      "unitCost": 1
+    },
+    {
+      "email": "qa-farmer-a@example.test",
+      "myExpenses": 1,
+      "historyNavigation": 0
+    }
+  ],
+  "mobile": {
+    "chartWidth": 328,
+    "points": 1,
+    "scrollWidth": 390,
+    "width": 390
+  },
+  "regression": "28 tests, typecheck/build, 41 HTTP groups",
+  "fixes": [
+    "Missing-data cultivation crop remains selectable during exploration",
+    "Sinhala harvest quantity and price verification labels"
+  ],
+  "finalConsole": [],
+  "finalSnapshot": "- complementary:\n  - text: Farm\n  - generic: wise\n  - generic: ®\n  - generic: ගොවිපළ වැඩබිම\n  - navigation \"ප්‍රධාන මෙනුව\":\n    - button \"දළ විශ්ලේෂණය\":\n      - text: දළ විශ්ලේෂණය\n    - button \"වගාවන් 2\":\n      - text: වගාවන්\n      - generic: \"2\"\n    - button \"ඉඩම් වාර්තා\":\n      - text: ඉඩම් වාර්තා\n    - button \"ක්‍රියාකාරකම් හා ශ්‍රමය\":\n      - text: ක්‍රියාකාරකම් හා ශ්‍රමය\n    - button \"වියදම් හා රිසිට්පත්\":\n      - text: වියදම් හා රිසිට්පත්\n    - button \"අරමුදල් හා අයවැය\":\n      - text: අරමුදල් හා අයවැය\n    - generic: විශ්ලේෂණ හා මෙවලම්\n    - button \"අස්වැන්න හා විකුණුම්\":\n      - text: අස්වැන්න හා විකුණුම්\n    - button \"පැරණි මිල ගණන්\" [active]:\n      - text: පැරණි මිල ගණන්\n    - button \"තීරණ ගැනීමට සහාය\":\n      - text: තීරණ ගැනීමට සහාය\n    - button \"වාර්තා හා බාගත කිරීම්\":\n      - text: වාර්තා හා බාගත කිරීම්\n    - button \"පරිපාලනය\":\n      - text: පරිපාලනය\n  - text: දේශීය වැඩබිම\n  - generic: සුරැකි දත්ත\n  - generic: සA\n  - strong: සිංහල API QA\n  - generic: ස්වාධීන ගොවියා\n  - button \"පිටවන්න\":\n- link \"අන්තර්ගතයට යන්න\":\n  - /url: \"#workspace-content\"\n- main:\n  - text: වැඩබිම\n  - strong: පැරණි මිල ගණන්\n  - generic: Language / සිංහල\n  - combobox \"Language / භාෂාව\":\n    - option \"English\"\n    - option \"සිංහල\" [selected]\n  - generic: 18 ඔක්. 2026\n  - button \"වාර්තාවක් එක් කරන්න\":\n    - generic: වාර්තාවක් එක් කරන්න\n  - generic: FARMWISE / පැරණි මිල ගණන්\n  - heading \"පැරණි මිල ගණන්\" [level=1]\n  - paragraph: මුල් මිල ලැයිස්තුවල මිල පරාස. ඔබේ ඊළඟ තීරණයට පැරණි දත්ත.\n  - generic: වගාව\n  - combobox \"වගාව\":\n    - option \"ප්‍රවේශය ඇති සියලු වගාවන්\"\n    - option \"QA Carrot Price Journey\" [selected]\n    - option \"QA Grapes Missing History\"\n  - strong: මේවා පැරණි වාර්තාය; වත්මන් වෙළෙඳපොළ මිල නොවේ\n  - paragraph: වැඩපොත් දෙකකින් මිල සටහන් 1,950ක් ඇත. සියලු ආනයනික මිල තහවුරු කර නැත. වැඩපොත් සටහන් අනුව ඒකකය රුපියල්/කි.ග්‍රෑ. වේ; මුල් මූලාශ්‍රය තහවුරු කිරීම ඉතිරිව ඇත. මිදි දත්ත නැත.\n  - paragraph: \"තෝරාගත් වගාවේ බෝගය: කැරට් · මුල් ප්‍රභේද වෙන්ව තබා ඇත. පහතින් වෙනත් නිෂ්පාදන ද බැලිය හැක.\"\n  - generic: නිෂ්පාදනය / මුල් ප්‍රභේදය\n  - combobox \"නිෂ්පාදනය / මුල් ප්‍රභේදය\":\n    - option \"Ambarella\"\n    - option \"Ambun Banana\"\n    - option \"Ash Plantain\"\n    - option \"Athugowa\"\n    - option \"Avocado\"\n    - option \"Banana - Ambul\"\n    - option \"Banana - Sini\"\n    - option \"Basil\"\n    - option \"Beans\"\n    - option \"Beetroot\"\n    - option \"Beetroot (Cut)\"\n    - option \"Bitter Gourd\"\n    - option \"Brinjal\"\n    - option \"Broccoli\"\n    - option \"Butternut Squash\"\n    - option \"Cabbage\"\n    - option \"Cabbage - Chinese\"\n    - option \"Cabbage red\"\n    - option \"Capsicum\"\n    - option \"Carrot\"\n    - option \"Carrots\"\n    - option \"Cauliflower\"\n    - option \"Celery\"\n    - option \"Chaw - Chaw\"\n    - option \"Coconut\"\n    - option \"Cooking Melon\"\n    - option \"Coriander leaves\"\n    - option \"Corns\"\n    - option \"Cowpea\"\n    - option \"Cucumber\"\n    - option \"Cucumber green\"\n    - option \"Curry Leaves\"\n    - option \"Drumsticks\"\n    - option \"Dry Chilies\"\n    - option \"Eggplant\"\n    - option \"Finger Millet\"\n    - option \"Garlic\"\n    - option \"Gherkin\"\n    - option \"Ginger\"\n    - option \"Gooseberry\"\n    - option \"Gotukola\"\n    - option \"Gram\"\n    - option \"Green Chili\"\n    - option \"Green Gram\"\n    - option \"Guava\"\n    - option \"Iceberg\"\n    - option \"Indian bael\"\n    - option \"Jackfruit\"\n    - option \"King Coconut\"\n    - option \"Kiriala\"\n    - option \"Knol khol\"\n    - option \"Kohila\"\n    - option \"Kolikuttu\"\n    - option \"Lady's Fingers\"\n    - option \"Leeks\"\n    - option \"Lettuce\"\n    - option \"Lettuce - Red\"\n    - option \"Lime\"\n    - option \"Long radish\"\n    - option \"Lotus Roots\"\n    - option \"Mango\"\n    - option \"Mango - Mal Amba\"\n    - option \"Manioc\"\n    - option \"Mint Leaves\"\n    - option \"Mint leaves\"\n    - option \"Mukunuwenna\"\n    - option \"Nai Miris\"\n    - option \"Onion Leaves\"\n    - option \"Pak choy\"\n    - option \"Papaya\"\n    - option \"Parsley\"\n    - option \"Passion\"\n    - option \"Peanuts\"\n    - option \"Pineapple\"\n    - option \"Plantain Flower\"\n    - option \"Potatoes\"\n    - option \"Potatoes red\"\n    - option \"Radish\"\n    - option \"Radish - red\"\n    - option \"Red Cabbage\"\n    - option \"Rhubarb\"\n    - option \"Ridge Gourd\"\n    - option \"Rosemary\"\n    - option \"Sesame\"\n    - option \"Snake Gourd\"\n    - option \"Soursop\"\n    - option \"Soya Bean\"\n    - option \"Spinach\"\n    - option \"Sweet Potato\"\n    - option \"TJC\"\n    - option \"Tamarind\"\n    - option \"Thai Eggplant\"\n    - option \"Thithbatu\"\n    - option \"Thumbakarawila\"\n    - option \"Tomato\"\n    - option \"Tomato (greenhouse)\"\n    - option \"Turmeric\"\n    - option \"Water Spinach\"\n    - option \"Watermelon\"\n    - option \"Wild Baby Potato\"\n    - option \"Winged Bean\"\n    - option \"Woodapple\"\n    - option \"Yard - Long Beans\"\n    - option \"ආනයනික - B Onion Import\"\n    - option \"ආනයනික - Potatoes Import\"\n    - option \"ආනයනික - Red Onion Import\"\n    - option \"කහ - Pepper - Y\"\n    - option \"කහ - Pepper - Yellow\"\n    - option \"කහ - Zucchini - yellow\"\n    - option \"කොළ - Pepper - G\"\n    - option \"කොළ - Pepper - Green\"\n    - option \"කොළ - Zucchini - green\"\n    - option \"දඹුල්ල - Beetroot Cut - D\"\n    - option \"නුවරඑළිය - Beetroot N\"\n    - option \"නුවරඑළිය - Carrot - N\" [selected]\n    - option \"නුවරඑළිය - Cauliflower N/E\"\n    - option \"නුවරඑළිය - Potatoes N\"\n    - option \"පුත්තලම - Beetroot Cut - P\"\n    - option \"මල්ලිපු - Beetroot Cut - M\"\n    - option \"මෙලන් - Pumpkin - Melon\"\n    - option \"යාපනය - Beetroot Cut - J\"\n    - option \"රතු - Pepper - R\"\n    - option \"රතු - Pepper - Red\"\n    - option \"ලංකා - B Onion Lanka\"\n    - option \"ලංකා - Red Onion - Lanka\"\n    - option \"වැලිමඩ - Potatoes W\"\n  - generic: සඳහන් වෙළෙඳපොළ\n  - combobox \"සඳහන් වෙළෙඳපොළ\":\n    - option \"සියලු වෙළෙඳපොළ\" [selected]\n    - option \"Dambulla\"\n    - option \"Thabuththegama\"\n  - checkbox \"සැක සහිත බව සලකුණු කළ මුල් වාර්තා පෙන්වන්න\"\n  - text: සැක සහිත බව සලකුණු කළ මුල් වාර්තා පෙන්වන්න\n  - heading \"නුවරඑළිය - Carrot - N · සියලු වෙළෙඳපොළ\" [level=2]\n  - paragraph: පැරණි මිල පරාසයේ මධ්‍ය අගය · තහවුරු කර නැත · රු./කි.ග්‍රෑ.\n  - img \"සැබෑ දින අනුව පැරණි මිල පරාස මධ්‍ය අගයන්\":\n    - generic: \"288\"\n    - generic: \"200\"\n    - generic: \"112\"\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-06: 120–220, මධ්‍ය අගය 170 රු./කි.ග්‍රෑ. · තහවුරු කර නැත\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-07: 200–240, මධ්‍ය අගය 220 රු./කි.ග්‍රෑ. · තහවුරු කර නැත\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-17: 200–220, මධ්‍ය අගය 210 රු./කි.ග්‍රෑ. · තහවුරු කර නැත\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-07-31: 260–260, මධ්‍ය අගය 260 රු./කි.ග්‍රෑ. · තහවුරු කර නැත\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-08-05: 280–280, මධ්‍ය අගය 280 රු./කි.ග්‍රෑ. · තහවුරු කර නැත\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-08-06: 220–280, මධ්‍ය අගය 250 රු./කි.ග්‍රෑ. · තහවුරු කර නැත\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-08-12: 180–230, මධ්‍ය අගය 205 රු./කි.ග්‍රෑ. · තහවුරු කර නැත\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-07: 160–200, මධ්‍ය අගය 180 රු./කි.ග්‍රෑ. · තහවුරු කර නැත\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-08: 170–250, මධ්‍ය අගය 210 රු./කි.ග්‍රෑ. · තහවුරු කර නැත\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-11: 140–150, මධ්‍ය අගය 145 රු./කි.ග්‍රෑ. · තහවුරු කර නැත\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-21: 200–220, මධ්‍ය අගය 210 රු./කි.ග්‍රෑ. · තහවුරු කර නැත\"'\n    - 'generic \"Dambulla · කැරට් - නුවරඑළිය - Carrot - N · 2026-09-22: 210–220, මධ්‍ය අගය 215 රු./කි.ග්‍රෑ. · තහවුරු කර නැත\"'\n    - generic: 2026-07-06\n    - generic: 2026-09-22\n  - list \"මිල දත්ත කාණ්ඩ\":\n    - listitem: Dambulla · කැරට් - නුවරඑළිය - Carrot - N\n  - paragraph: පැරණි මිල පරාසයේ මධ්‍ය අගය · තහවුරු කර නැත · රු./කි.ග්‍රෑ.\n  - generic: ප්‍රස්ථාරයට සම්පූර්ණ, නිවැරදි අනුපිළිවෙළ ඇති හා වෙළෙඳපොළ හඳුනාගැනීමේ සැකයක් නැති පරාස භාවිත වේ. මධ්‍ය අගයන් ගනුදෙනු මිල නොව ගණිතමය අගයන්ය. කාල පරතර සැබෑ දින අනුව වේ.\n  - paragraph: 2026 සැප්තැම්බර් 24 සිට දඹුල්ල ලෙස නම් කළ දත්තවල කැප්පෙටිපොළ පත්‍ර භාවිත වී ඇත; වෙළෙඳපොළ හඳුනාගැනීම අවිනිශ්චිතය. පෙරළුණු පරාස අටක් පරීක්ෂාව සඳහා තබා ඇත. අසම්පූර්ණ පරාස සඳහා මධ්‍ය අගයක් නැත. මුල් අගයන් වෙනස් කර නැත.\n  - heading \"මුල් මිල සටහන්\" [level=2]\n  - paragraph: 12 / 15 · මෙම තේරීමේ වාර්තා\n  - table:\n    - rowgroup:\n      - row \"දිනය මුල් නිෂ්පාදන නාමය වෙළෙඳපොළ හඳුනාගැනීම අවම / උපරිම මධ්‍ය අගය මූලාශ්‍රය / තත්ත්වය\":\n        - columnheader \"දිනය\"\n        - columnheader \"මුල් නිෂ්පාදන නාමය\"\n        - columnheader \"වෙළෙඳපොළ හඳුනාගැනීම\"\n        - columnheader \"අවම / උපරිම\"\n        - columnheader \"මධ්‍ය අගය\"\n        - columnheader \"මූලාශ්‍රය / තත්ත්වය\"\n    - rowgroup:\n      - row \"2026-09-22 කැරට් - නුවරඑළිය - Carrot - N Vegetables Dambulla සඳහන් කර ඇත, තහවුරු කර නැත 210 / 220 215 තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AF10:AG10\":\n        - cell \"2026-09-22\"\n        - cell \"කැරට් - නුවරඑළිය - Carrot - N Vegetables\":\n          - text: කැරට් - නුවරඑළිය - Carrot - N\n          - generic: Vegetables\n        - cell \"Dambulla සඳහන් කර ඇත, තහවුරු කර නැත\":\n          - text: Dambulla\n          - generic: සඳහන් කර ඇත, තහවුරු කර නැත\n        - cell \"210 / 220\"\n        - cell \"215\"\n        - cell \"තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AF10:AG10\":\n          - generic: තහවුරු කර නැත\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!AF10:AG10\n      - row \"2026-09-21 කැරට් - නුවරඑළිය - Carrot - N Vegetables Dambulla සඳහන් කර ඇත, තහවුරු කර නැත 200 / 220 210 තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AD10:AE10\":\n        - cell \"2026-09-21\"\n        - cell \"කැරට් - නුවරඑළිය - Carrot - N Vegetables\":\n          - text: කැරට් - නුවරඑළිය - Carrot - N\n          - generic: Vegetables\n        - cell \"Dambulla සඳහන් කර ඇත, තහවුරු කර නැත\":\n          - text: Dambulla\n          - generic: සඳහන් කර ඇත, තහවුරු කර නැත\n        - cell \"200 / 220\"\n        - cell \"210\"\n        - cell \"තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AD10:AE10\":\n          - generic: තහවුරු කර නැත\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!AD10:AE10\n      - row \"2026-09-11 කැරට් - නුවරඑළිය - Carrot - N Vegetables Dambulla සඳහන් කර ඇත, තහවුරු කර නැත 140 / 150 145 තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AB10:AC10\":\n        - cell \"2026-09-11\"\n        - cell \"කැරට් - නුවරඑළිය - Carrot - N Vegetables\":\n          - text: කැරට් - නුවරඑළිය - Carrot - N\n          - generic: Vegetables\n        - cell \"Dambulla සඳහන් කර ඇත, තහවුරු කර නැත\":\n          - text: Dambulla\n          - generic: සඳහන් කර ඇත, තහවුරු කර නැත\n        - cell \"140 / 150\"\n        - cell \"145\"\n        - cell \"තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!AB10:AC10\":\n          - generic: තහවුරු කර නැත\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!AB10:AC10\n      - row \"2026-09-08 කැරට් - නුවරඑළිය - Carrot - N Vegetables Dambulla සඳහන් කර ඇත, තහවුරු කර නැත 170 / 250 210 තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!Z10:AA10\":\n        - cell \"2026-09-08\"\n        - cell \"කැරට් - නුවරඑළිය - Carrot - N Vegetables\":\n          - text: කැරට් - නුවරඑළිය - Carrot - N\n          - generic: Vegetables\n        - cell \"Dambulla සඳහන් කර ඇත, තහවුරු කර නැත\":\n          - text: Dambulla\n          - generic: සඳහන් කර ඇත, තහවුරු කර නැත\n        - cell \"170 / 250\"\n        - cell \"210\"\n        - cell \"තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!Z10:AA10\":\n          - generic: තහවුරු කර නැත\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!Z10:AA10\n      - row \"2026-09-07 කැරට් - නුවරඑළිය - Carrot - N Vegetables Dambulla සඳහන් කර ඇත, තහවුරු කර නැත 160 / 200 180 තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!X10:Y10\":\n        - cell \"2026-09-07\"\n        - cell \"කැරට් - නුවරඑළිය - Carrot - N Vegetables\":\n          - text: කැරට් - නුවරඑළිය - Carrot - N\n          - generic: Vegetables\n        - cell \"Dambulla සඳහන් කර ඇත, තහවුරු කර නැත\":\n          - text: Dambulla\n          - generic: සඳහන් කර ඇත, තහවුරු කර නැත\n        - cell \"160 / 200\"\n        - cell \"180\"\n        - cell \"තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!X10:Y10\":\n          - generic: තහවුරු කර නැත\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!X10:Y10\n      - row \"2026-08-12 කැරට් - නුවරඑළිය - Carrot - N Vegetables Dambulla සඳහන් කර ඇත, තහවුරු කර නැත 180 / 230 205 තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!V10:W10\":\n        - cell \"2026-08-12\"\n        - cell \"කැරට් - නුවරඑළිය - Carrot - N Vegetables\":\n          - text: කැරට් - නුවරඑළිය - Carrot - N\n          - generic: Vegetables\n        - cell \"Dambulla සඳහන් කර ඇත, තහවුරු කර නැත\":\n          - text: Dambulla\n          - generic: සඳහන් කර ඇත, තහවුරු කර නැත\n        - cell \"180 / 230\"\n        - cell \"205\"\n        - cell \"තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!V10:W10\":\n          - generic: තහවුරු කර නැත\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!V10:W10\n      - row \"2026-08-06 කැරට් - නුවරඑළිය - Carrot - N Vegetables Dambulla සඳහන් කර ඇත, තහවුරු කර නැත 220 / 280 250 තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!T10:U10\":\n        - cell \"2026-08-06\"\n        - cell \"කැරට් - නුවරඑළිය - Carrot - N Vegetables\":\n          - text: කැරට් - නුවරඑළිය - Carrot - N\n          - generic: Vegetables\n        - cell \"Dambulla සඳහන් කර ඇත, තහවුරු කර නැත\":\n          - text: Dambulla\n          - generic: සඳහන් කර ඇත, තහවුරු කර නැත\n        - cell \"220 / 280\"\n        - cell \"250\"\n        - cell \"තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!T10:U10\":\n          - generic: තහවුරු කර නැත\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!T10:U10\n      - row \"2026-08-05 කැරට් - නුවරඑළිය - Carrot - N Vegetables Dambulla සඳහන් කර ඇත, තහවුරු කර නැත 280 / 280 280 තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!R10:S10\":\n        - cell \"2026-08-05\"\n        - cell \"කැරට් - නුවරඑළිය - Carrot - N Vegetables\":\n          - text: කැරට් - නුවරඑළිය - Carrot - N\n          - generic: Vegetables\n        - cell \"Dambulla සඳහන් කර ඇත, තහවුරු කර නැත\":\n          - text: Dambulla\n          - generic: සඳහන් කර ඇත, තහවුරු කර නැත\n        - cell \"280 / 280\"\n        - cell \"280\"\n        - cell \"තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!R10:S10\":\n          - generic: තහවුරු කර නැත\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!R10:S10\n      - row \"2026-07-31 කැරට් - නුවරඑළිය - Carrot - N Vegetables Dambulla සඳහන් කර ඇත, තහවුරු කර නැත 260 / 260 260 තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!P10:Q10\":\n        - cell \"2026-07-31\"\n        - cell \"කැරට් - නුවරඑළිය - Carrot - N Vegetables\":\n          - text: කැරට් - නුවරඑළිය - Carrot - N\n          - generic: Vegetables\n        - cell \"Dambulla සඳහන් කර ඇත, තහවුරු කර නැත\":\n          - text: Dambulla\n          - generic: සඳහන් කර ඇත, තහවුරු කර නැත\n        - cell \"260 / 260\"\n        - cell \"260\"\n        - cell \"තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!P10:Q10\":\n          - generic: තහවුරු කර නැත\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!P10:Q10\n      - row \"2026-07-17 කැරට් - නුවරඑළිය - Carrot - N Vegetables Dambulla සඳහන් කර ඇත, තහවුරු කර නැත 200 / 220 210 තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!L10:M10\":\n        - cell \"2026-07-17\"\n        - cell \"කැරට් - නුවරඑළිය - Carrot - N Vegetables\":\n          - text: කැරට් - නුවරඑළිය - Carrot - N\n          - generic: Vegetables\n        - cell \"Dambulla සඳහන් කර ඇත, තහවුරු කර නැත\":\n          - text: Dambulla\n          - generic: සඳහන් කර ඇත, තහවුරු කර නැත\n        - cell \"200 / 220\"\n        - cell \"210\"\n        - cell \"තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!L10:M10\":\n          - generic: තහවුරු කර නැත\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!L10:M10\n      - row \"2026-07-07 කැරට් - නුවරඑළිය - Carrot - N Vegetables Dambulla සඳහන් කර ඇත, තහවුරු කර නැත 200 / 240 220 තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!D10:E10\":\n        - cell \"2026-07-07\"\n        - cell \"කැරට් - නුවරඑළිය - Carrot - N Vegetables\":\n          - text: කැරට් - නුවරඑළිය - Carrot - N\n          - generic: Vegetables\n        - cell \"Dambulla සඳහන් කර ඇත, තහවුරු කර නැත\":\n          - text: Dambulla\n          - generic: සඳහන් කර ඇත, තහවුරු කර නැත\n        - cell \"200 / 240\"\n        - cell \"220\"\n        - cell \"තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!D10:E10\":\n          - generic: තහවුරු කර නැත\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!D10:E10\n      - row \"2026-07-06 කැරට් - නුවරඑළිය - Carrot - N Vegetables Dambulla සඳහන් කර ඇත, තහවුරු කර නැත 120 / 220 170 තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!B10:C10\":\n        - cell \"2026-07-06\"\n        - cell \"කැරට් - නුවරඑළිය - Carrot - N Vegetables\":\n          - text: කැරට් - නුවරඑළිය - Carrot - N\n          - generic: Vegetables\n        - cell \"Dambulla සඳහන් කර ඇත, තහවුරු කර නැත\":\n          - text: Dambulla\n          - generic: සඳහන් කර ඇත, තහවුරු කර නැත\n        - cell \"120 / 220\"\n        - cell \"170\"\n        - cell \"තහවුරු කර නැත dambulla_price_comparison_bilingual_categorized.xlsx Dambulla!B10:C10\":\n          - generic: තහවුරු කර නැත\n          - generic \"10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de\":\n            - text: dambulla_price_comparison_bilingual_categorized.xlsx\n            - text: Dambulla!B10:C10\n  - button \"පෙර\" [disabled]\n  - generic: පිටුව 1 / 1\n  - button \"ඊළඟ\" [disabled]\n  - text: Farmwise\n  - generic: ඔබේ වාර්තා මත පදනම් වූ තීරණ සඳහා.\n  - generic: රු. · කි.ග්‍රෑ. · අක්කර · Asia/Colombo\n- alert"
+}

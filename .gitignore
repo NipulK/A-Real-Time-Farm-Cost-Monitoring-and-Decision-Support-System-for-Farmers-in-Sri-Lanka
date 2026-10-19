@@ -1,0 +1,12 @@
+node_modules/
+.next/
+.env*
+!.env.example
+storage/
+*.tsbuildinfo
+
+# Private database backups
+backups/
+
+# macOS metadata
+.DS_Store

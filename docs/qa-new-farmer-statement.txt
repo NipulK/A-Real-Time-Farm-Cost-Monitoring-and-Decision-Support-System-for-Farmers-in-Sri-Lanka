@@ -1,0 +1,52 @@
+Workspace
+Reports & exports
+18 Oct 2026
+Add record
+FARMWISE / REPORTS & EXPORTS
+Reports & exports
+
+A dependable record of each season, from field to sale.
+
+Cultivation
+All accessible cultivations
+New Farmer Watermelon Season
+
+Export only records you are permitted to access.
+
+Summary CSV
+Ledger CSV
+Print report
+Cultivation financial statement
+
+LKR · actual records in the selected scope
+
+Investment funding (capital)
+LKR 10,000
+Cash cultivation costs
+LKR 2,000
+Imputed cultivation costs
+LKR 600
+Total economic cost
+LKR 2,600
+Sales revenue (agreed value)
+LKR 5,000
+Economic profit / loss
+LKR 2,400
+Customer payments received
+LKR 2,000
+Receivables
+LKR 3,000
+Net recorded cash (funding + payments − cash costs)
+LKR 10,000
+
+Unsold harvest is not recognized as sales revenue. This is a cultivation monitoring statement; no tax or full business balance-sheet treatment is applied. CSV amounts use LKR; quantity columns use kg and areas use acres.
+
+Correction history
+
+Voided records remain visible and excluded from actual totals
+
+DATE	TYPE	CULTIVATION	ORIGINAL PAYLOAD
+2026-10-18	expense	New Farmer Watermelon Season	{"description":"Own family labour value","category":"Labour","amount":50000,"basis":"imputed","activity_id":""}
+Farmwise
+Made for decisions grounded in your records.
+LKR · kg · acres · Asia/Colombo

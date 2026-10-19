@@ -1,0 +1,57 @@
+{
+  "sources": [
+    {
+      "filename": "dambulla_price_comparison_bilingual_categorized.xlsx",
+      "sha256": "10145907f823b209ffea4eeb05a900416d30fd845591ceaa78c749db50d596de",
+      "sheet": "Dambulla",
+      "products": 110,
+      "dates": [
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-09",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-31",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-12",
+        "2026-09-07",
+        "2026-09-08",
+        "2026-09-11",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-24",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07"
+      ]
+    },
+    {
+      "filename": "thabuththegama_price_comparison_bilingual_categorized.xlsx",
+      "sha256": "b6a770f9f3412d68da0f2da97af9e1f4c2306b0ec6586a796ee54f4733faa0ce",
+      "sheet": "Thabuththegama",
+      "products": 34,
+      "dates": [
+        "2026-01-08",
+        "2026-01-11",
+        "2026-01-12",
+        "2026-09-24",
+        "2026-09-28",
+        "2026-09-29",
+        "2026-10-05",
+        "2026-10-06",
+        "2026-10-07"
+      ]
+    }
+  ],
+  "observations": 1950,
+  "complete": 1645,
+  "partial": 297,
+  "reversed": 8,
+  "uncertainMarket": 362,
+  "allImportedUnverified": true
+}

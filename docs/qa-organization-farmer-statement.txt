@@ -1,0 +1,34 @@
+FR-EA3D42C9A5B8
+My expenses
+
+QA Newly Registered Company Farmer · QA Growers Company
+
+Change password
+
+You can only view expenses recorded against your farmer ID. Your supervisor records and corrects these expenses.
+
+My cash expenses
+LKR 1,800.75
+My imputed expenses
+LKR 250.00
+My total expenses
+LKR 2,050.75
+Expenses for FR-EA3D42C9A5B8
+Download my expenses
+DATE	EXPENSE / CULTIVATION	CATEGORY	AMOUNT	RECORDER / RECEIPTS
+2026-10-18	Corrected new farmer family labour
+QA Organization Watermelon
+	Labour
+imputed
+	LKR 250.00	QA Supervisor
+2026-10-18	New farmer family labour
+QA Organization Watermelon · Corrected / voided
+	Labour
+imputed
+	LKR 200.00	QA Supervisor
+2026-10-18	New farmer irrigation expense
+QA Organization Watermelon
+	Irrigation
+cash
+	LKR 1,800.75	QA Supervisor
+land-outline.png

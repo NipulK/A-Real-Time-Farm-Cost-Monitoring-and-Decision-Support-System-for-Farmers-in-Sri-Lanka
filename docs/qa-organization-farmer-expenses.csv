@@ -1,0 +1,4 @@
+﻿"expense_id","date","cultivation","description","category","basis","amount_LKR","voided","recorded_by"
+"2267ea00-9c11-42a8-8471-a89725be6f5d","2026-10-18","QA Organization Watermelon","Corrected new farmer family labour","Labour","imputed","250","false","QA Supervisor"
+"1087e853-167c-4b4c-9d98-d2f0ba488e1a","2026-10-18","QA Organization Watermelon","New farmer family labour","Labour","imputed","200","true","QA Supervisor"
+"1c6dccb6-f8e8-4a39-a75c-b734baf719b0","2026-10-18","QA Organization Watermelon","New farmer irrigation expense","Irrigation","cash","1800.75","false","QA Supervisor"

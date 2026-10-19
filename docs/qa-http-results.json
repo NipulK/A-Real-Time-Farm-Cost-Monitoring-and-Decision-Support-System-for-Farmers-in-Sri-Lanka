@@ -1,0 +1,185 @@
+{
+  "started": "2026-10-18T21:56:07.110Z",
+  "checks": [
+    {
+      "name": "Anonymous protected routes and bootstrap registration guard",
+      "pass": true
+    },
+    {
+      "name": "One-time system administrator setup",
+      "pass": true
+    },
+    {
+      "name": "Independent self-registration activates immediately with first land",
+      "pass": true
+    },
+    {
+      "name": "Independent login accepts normalized mobile and registered email",
+      "pass": true
+    },
+    {
+      "name": "Independent language preference persists, is account-scoped and denies other roles",
+      "pass": true
+    },
+    {
+      "name": "Missing sketch, invalid content and duplicate mobile/email are rejected",
+      "pass": true
+    },
+    {
+      "name": "Mobile-only independent account has no invented visible email",
+      "pass": true
+    },
+    {
+      "name": "Company application requires registration evidence and remains pending",
+      "pass": true
+    },
+    {
+      "name": "Pending organizations cannot operate or register members",
+      "pass": true
+    },
+    {
+      "name": "Multiple lands retain units, exact conversion, locations and private sketches",
+      "pass": true
+    },
+    {
+      "name": "Admin rejection, feedback, resubmission and more-information flow",
+      "pass": true
+    },
+    {
+      "name": "Admin approval unlocks organization operations without re-registering",
+      "pass": true
+    },
+    {
+      "name": "Approved organization registers two farmers and one supervisor",
+      "pass": true
+    },
+    {
+      "name": "New organization farmer receives a header-only expense CSV before any costs",
+      "pass": true
+    },
+    {
+      "name": "Organization cultivation, farmer and supervisor assignments",
+      "pass": true
+    },
+    {
+      "name": "Supervisor attributes every organization expense to a valid assigned farmer",
+      "pass": true
+    },
+    {
+      "name": "Organization farmers receive only their own expense details",
+      "pass": true
+    },
+    {
+      "name": "Organization farmers cannot create, correct, approve, assign or upload",
+      "pass": true
+    },
+    {
+      "name": "Receipts and CSV exports cannot bypass farmer isolation",
+      "pass": true
+    },
+    {
+      "name": "Owner sees all organization records, farmer attributions and totals",
+      "pass": true
+    },
+    {
+      "name": "Independent farmer can record own costs without a supervisor or farmer attribution",
+      "pass": true
+    },
+    {
+      "name": "Different organizations cannot see or assign one another’s members or data",
+      "pass": true
+    },
+    {
+      "name": "Self-registration stores Sinhala preference without translating record data",
+      "pass": true
+    },
+    {
+      "name": "Language endpoint rejects organization owners, supervisors and organization farmers",
+      "pass": true
+    },
+    {
+      "name": "Authenticated pages load for all five roles; restricted farmer page hides member registration",
+      "pass": true
+    },
+    {
+      "name": "Independent farmer completes own funding, harvest, sale, payment, correction and closure",
+      "pass": true
+    },
+    {
+      "name": "Administrator maintains crop catalogue and reference-area policy",
+      "pass": true
+    },
+    {
+      "name": "Supervisor cannot manage funding, budgets, accounts, policies or assignments",
+      "pass": true
+    },
+    {
+      "name": "Independent and organization owners cannot grant administrator privileges or approve organizations",
+      "pass": true
+    },
+    {
+      "name": "Removing supervisor assignment revokes operational and receipt access immediately",
+      "pass": true
+    },
+    {
+      "name": "Organization farmer password change revokes old sessions and preserves own-expense access",
+      "pass": true
+    },
+    {
+      "name": "Removing farmer assignment prevents new attribution without hiding historical expenses",
+      "pass": true
+    },
+    {
+      "name": "Organization and member deactivation decisions immediately enforce access",
+      "pass": true
+    },
+    {
+      "name": "Harvest/sales/payment calculations, concurrent stock checks and partial payments",
+      "pass": true
+    },
+    {
+      "name": "Corrections retain attribution and farmer totals exclude voided costs",
+      "pass": true
+    },
+    {
+      "name": "Request origin, size, malformed JSON and numeric precision guards",
+      "pass": true
+    },
+    {
+      "name": "Password maintenance, session revocation and login throttling",
+      "pass": true
+    },
+    {
+      "name": "Land edits enforce ownership and allocated field area",
+      "pass": true
+    },
+    {
+      "name": "Closure/validation and audit exports retain prior financial protections",
+      "pass": true
+    },
+    {
+      "name": "Self-employed farmer edits own profile; updated identifiers work and duplicate/unsafe changes roll back",
+      "pass": true
+    },
+    {
+      "name": "Profile endpoint denies every other role and anonymous requests",
+      "pass": true
+    },
+    {
+      "name": "Persistence preserves membership, approvals, expenses, sketches and language after restart",
+      "pass": true
+    },
+    {
+      "name": "Pending applicant page remains separated from organization operations",
+      "pass": true
+    },
+    {
+      "name": "Dedicated administrator workspace and summary endpoint enforce administrator-only access",
+      "pass": true
+    }
+  ],
+  "storage": "/var/folders/4w/cy18l1w505v_gjnw_tb4kjt00000gn/T/farmwise-http-qa-vKZovT",
+  "base": "http://127.0.0.1:3107",
+  "finished": "2026-10-18T21:56:09.666Z",
+  "passed": 44
+}

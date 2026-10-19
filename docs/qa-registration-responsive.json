@@ -1,0 +1,122 @@
+[
+  {
+    "view": "independent registration",
+    "document": 320,
+    "width": 320
+  },
+  {
+    "view": "independent registration",
+    "document": 390,
+    "width": 390
+  },
+  {
+    "view": "independent registration",
+    "document": 768,
+    "width": 768
+  },
+  {
+    "view": "independent registration",
+    "document": 1440,
+    "width": 1440
+  },
+  {
+    "view": "organization registration",
+    "document": 320,
+    "width": 320
+  },
+  {
+    "view": "organization registration",
+    "document": 390,
+    "width": 390
+  },
+  {
+    "view": "organization registration",
+    "document": 768,
+    "width": 768
+  },
+  {
+    "view": "organization registration",
+    "document": 1440,
+    "width": 1440
+  },
+  {
+    "view": "pending organization",
+    "document": 320,
+    "width": 320
+  },
+  {
+    "view": "pending organization",
+    "document": 390,
+    "width": 390
+  },
+  {
+    "view": "pending organization",
+    "document": 768,
+    "width": 768
+  },
+  {
+    "view": "pending organization",
+    "document": 1440,
+    "width": 1440
+  },
+  {
+    "view": "organization people and farmer totals",
+    "document": 320,
+    "width": 320
+  },
+  {
+    "view": "organization people and farmer totals",
+    "document": 390,
+    "width": 390
+  },
+  {
+    "view": "organization people and farmer totals",
+    "document": 768,
+    "width": 768
+  },
+  {
+    "view": "organization people and farmer totals",
+    "document": 1440,
+    "width": 1440
+  },
+  {
+    "view": "farmer own-expense portal",
+    "document": 320,
+    "width": 320
+  },
+  {
+    "view": "farmer own-expense portal",
+    "document": 390,
+    "width": 390
+  },
+  {
+    "view": "farmer own-expense portal",
+    "document": 768,
+    "width": 768
+  },
+  {
+    "view": "farmer own-expense portal",
+    "document": 1440,
+    "width": 1440
+  },
+  {
+    "view": "multiple land records",
+    "document": 320,
+    "width": 320
+  },
+  {
+    "view": "multiple land records",
+    "document": 390,
+    "width": 390
+  },
+  {
+    "view": "multiple land records",
+    "document": 768,
+    "width": 768
+  },
+  {
+    "view": "multiple land records",
+    "document": 1440,
+    "width": 1440
+  }
+]
