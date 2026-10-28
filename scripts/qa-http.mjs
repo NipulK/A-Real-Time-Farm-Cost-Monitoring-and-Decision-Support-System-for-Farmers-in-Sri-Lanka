@@ -1776,6 +1776,44 @@ try {
     assert.equal((await farmerA.snapshot()).expenseCultivationCount,1);
   });
   report.finished = new Date().toISOString();
+  const kysCases = [
+    { name: "Profit", status: "profit", price: 120, difference: 200000 },
+    { name: "Loss", status: "loss", price: 80, difference: -200000 },
+    { name: "Break-even", status: "break_even", price: 100, difference: 0 },
+    { name: "Insufficient information", status: "insufficient_information", price: null, difference: null },
+  ];
+  const kysField = (await independent.snapshot()).fields[0].id;
+  for (const example of kysCases) {
+    await check(`KYS ${example.name}: SQLite snapshot, rendered result and CSV agree`, async () => {
+      const cid = await create(independent, "cultivation", {
+        name: "KYS QA " + example.name, field_id: kysField, crop_id: "carrot", variety: "Common",
+        planted: "2026-09-01", harvest_date: "2026-11-01", acres: 0.01, budget: 20000, forecast_kg: 100,
+      });
+      const blank = (await independent.snapshot()).cultivations.find(c => c.id === cid).kys;
+      assert.equal(blank.status, "insufficient_information");
+      assert.equal(blank.financialResult, null);
+      if (example.price !== null) {
+        await create(independent, "expense", { description: "KYS cash expense", category: "Seeds", basis: "cash", amount: 8000 }, cid);
+        await create(independent, "expense", { description: "KYS family labour", category: "Labour", basis: "imputed", amount: 2000 }, cid);
+        const hid = await create(independent, "harvest", { description: "KYS harvest", grade: "A", total: 110, saleable: 100, loss: 10 }, cid);
+        assert.deepEqual((await independent.snapshot()).cultivations.find(c => c.id === cid).kys.missing, ["sales"]);
+        await create(independent, "sale", { harvest_id: hid, buyer: "KYS QA buyer", kg: 100, price: example.price }, cid);
+        await create(independent, "investment", { description: "KYS funds are not revenue", investor: "QA investor", amount: 100000 }, cid);
+      }
+      const result = (await independent.snapshot()).cultivations.find(c => c.id === cid).kys;
+      assert.equal(result.status, example.status);
+      assert.equal(result.financialResult, example.difference);
+      if (example.price !== null) assert.equal(result.costPerKg, 10000);
+      const html = (await independent.request("/")).data;
+      assert(html.includes(`data-kys-status="${example.status}"`));
+      assert(html.includes("KYS QA " + example.name));
+      const output = await independent.request("/api/export?kind=summary&cultivation=" + cid);
+      assert.equal(output.status, 200); assert(output.data.includes('"kys_status"'));
+      assert(output.data.includes('"' + example.status + '"'));
+      const unauthorized = await owner.request("/api/export?kind=summary&cultivation=" + cid);
+      assert.equal(unauthorized.status, 200); assert(!unauthorized.data.includes("KYS QA " + example.name));
+    });
+  }
   report.passed = report.checks.length;
   writeFileSync("docs/qa-http-results.json", JSON.stringify(report, null, 2));
   console.log(`\n${report.passed} integration groups passed. Server ${base}`);

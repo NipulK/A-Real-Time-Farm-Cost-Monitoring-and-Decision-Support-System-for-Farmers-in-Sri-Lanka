@@ -1,3 +1,4 @@
+import { evaluateKys } from "./kys";
 import { assertOperational, hydrateUser } from "./access";
 import { registrationView } from "./registration";
 import { randomUUID } from "node:crypto";
@@ -359,6 +360,7 @@ export function snapshot(user: Row): Row {
     cultivations: cs.map((c) => ({
       ...c,
       summary: totals(entries.filter((e) => e.cultivation_id === c.id) as any),
+      kys: evaluateKys(entries.filter((e) => e.cultivation_id === c.id) as any),
       approved: areas.some(
         (a) =>
           a.approved &&

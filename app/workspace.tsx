@@ -1,4 +1,6 @@
 "use client";
+import { KysStatusPanel } from "./kys-status";
+import { evaluateKys } from "../lib/kys";
 import { TeamOverview } from "./role-dashboards";
 import IndependentOverview from "./independent-overview";
 import { useLanguage, LanguageSelector } from "./language";
@@ -309,6 +311,7 @@ export default function Workspace({
     summary = totals(entries as any),
     budget = cs.reduce((s, c) => s + c.budget, 0),
     usage = budget ? (summary.cash / budget) * 100 : 0;
+  const kysComplete = cs.length > 0 && cs.every(c => evaluateKys(entries.filter(e => e.cultivation_id === c.id) as any).status !== "insufficient_information");
   const canManage = !!c && (admin || c.owner_id === user.id);
   const organizationCultivation = !!c && !!(user.organization_id ||
     data.organizations?.some((o: R) => o.owner_id === c.owner_id));
@@ -813,6 +816,7 @@ export default function Workspace({
                   )}
                 </div>
               )}
+              <KysStatusPanel cultivations={cs as any} entries={entries as any} />
               <div className="stats">
                 <Stat
                   label={t("Cash cultivation costs")}
@@ -832,8 +836,8 @@ export default function Workspace({
                 />
                 <Stat
                   label={t("Economic profit / loss")}
-                  value={money(summary.profit)}
-                  note={t("Sales less cash and imputed costs")}
+                  value={kysComplete ? money(summary.profit) : t("Insufficient information")}
+                  note={t(kysComplete ? "Sales less cash and imputed costs" : "Complete expense, harvest and sales records for every selected cultivation.")}
                   accent
                   icon={<ChartNoAxesCombined size={19} />}
                 />
@@ -1068,6 +1072,7 @@ export default function Workspace({
                       note={t("Uses actual saleable harvest")}
                     />}
                   </div>
+                  <KysStatusPanel cultivations={[c] as any} entries={entries as any} />
                   <CultivationPriceHistory key={c.id} crop={c.crop} historical={historical} />
                   <div className="dashboard-grid">
                     <section className="panel">
@@ -1736,6 +1741,7 @@ export default function Workspace({
           )}
           {page === "decisions" && (
             <>
+              <KysStatusPanel cultivations={cs as any} entries={entries as any} />
               <div className="dashboard-grid">
                 <section className="panel">
                   <PanelHead
@@ -1911,6 +1917,7 @@ export default function Workspace({
                     {t("Print report")}</button>
                 </div>
               </div>
+              <KysStatusPanel cultivations={cs as any} entries={entries as any} />
               <section className="panel">
                 <PanelHead
                   title={t("Cultivation financial statement")}

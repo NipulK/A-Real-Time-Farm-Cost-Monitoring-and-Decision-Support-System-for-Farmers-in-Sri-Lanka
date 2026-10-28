@@ -49,6 +49,8 @@ export async function GET(request: Request) {
         crop: c.crop,
         district: c.district,
         status: c.status,
+        kys_status: c.kys.status,
+        kys_missing_records: c.kys.missing.join("; "),
         area_acres: c.acres,
         budget_LKR: c.budget / 100,
         ...Object.fromEntries(
