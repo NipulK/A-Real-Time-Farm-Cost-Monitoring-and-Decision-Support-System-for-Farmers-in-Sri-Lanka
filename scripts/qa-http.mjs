@@ -536,7 +536,7 @@ try {
     },
   );
   await check(
-    "Admin rejection, feedback, resubmission and more-information flow",
+    "Admin rejection blocks resubmission; more-information applications can resubmit",
     async () => {
       assert.equal(
         (
@@ -556,11 +556,11 @@ try {
       assert.equal(
         (await reg(owner, { action: "resubmitOrganization", data: orgDetails }))
           .status,
-        200,
+        403,
       );
       assert.equal(
         (await owner.snapshot()).user.organization_status,
-        "pending",
+        "rejected",
       );
       assert.equal(
         (
@@ -577,7 +577,8 @@ try {
         (await owner.snapshot()).user.organization_status,
         "needs_info",
       );
-      await reg(owner, { action: "resubmitOrganization", data: orgDetails });
+      assert.equal((await reg(owner, { action: "resubmitOrganization", data: orgDetails })).status, 200);
+      assert.equal((await owner.snapshot()).user.organization_status, "pending");
     },
   );
   await check(

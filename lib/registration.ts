@@ -309,6 +309,8 @@ export function registrationAction(input: Row, body: Row) {
   }
   if (body.action === "resubmitOrganization") {
     const org = requireOrganizationOwner(user);
+    if (org.status === "rejected")
+      throw new Error("403: Rejected applications cannot be resubmitted. Please contact the system administrator for further assistance.");
     if (org.status === "approved")
       throw new Error(
         "409: An approved organization cannot resubmit an application.",

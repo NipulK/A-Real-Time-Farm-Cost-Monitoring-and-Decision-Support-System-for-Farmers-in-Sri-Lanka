@@ -1,5 +1,7 @@
 "use client";
+import { OrganizationRegistrationSteps, useApprovalDialog } from "./organization-registration-progress";
 import { FarmerExpenseOverview } from "./role-dashboards";
+import { acknowledgeApproval, REJECTED_APPLICATION_MESSAGE } from "../lib/approval-feedback";
 import { LanguageProvider, LanguageSelector, useLanguage } from "./language";
 import { FormEvent, useEffect, useState } from "react";
 import {
@@ -235,6 +237,7 @@ function RegistrationForm({ setup, mode, setMode }: { setup: boolean; mode: stri
   const { t } = useLanguage();
   const { language } = useLanguage();
   const
+    [registrationSection, setRegistrationSection] = useState("details"),
     [orgType, setOrgType] = useState("company"),
     [busy, setBusy] = useState(false),
     [error, setError] = useState("");
@@ -317,7 +320,7 @@ function RegistrationForm({ setup, mode, setMode }: { setup: boolean; mode: stri
           {t("Private local accounts · multiple lands · accountable records")}</small>
       </div>
       <div className="auth-side">
-        <form className="auth-card" onSubmit={submit} key={mode}>
+        <form className="auth-card" onSubmit={submit} key={mode} onFocusCapture={event => { const target = event.target; const name = target instanceof HTMLInputElement || target instanceof HTMLSelectElement ? target.name : ""; setRegistrationSection(name.startsWith("land_") || name === "sketch" || name === "verification" ? "land" : "details"); }}>
           <div className="auth-form-top"><span className="auth-form-icon" aria-hidden="true">{mode==="organization"?<ShieldCheck size={23}/>:mode==="independent"?<Sprout size={23}/>:<FileText size={23}/>}</span><LanguageSelector /></div>
           <span className="badge">{t("FARM REGISTRATION")}</span>
           <h2>
@@ -338,6 +341,7 @@ function RegistrationForm({ setup, mode, setMode }: { setup: boolean; mode: stri
                   ? t("No administrator approval needed. Register yourself and your first land to get started.")
                   : t("Your application and land details will be reviewed by the system administrator. Organization operations remain locked until approval.")}
           </p>
+          {mode === "organization" && <OrganizationRegistrationSteps section={registrationSection} />}
           <div
             className={mode === "login" || mode === "setup" ? "" : "form-grid"}
           >
@@ -663,6 +667,7 @@ export function OrganizationPanel({
   onRefresh: () => Promise<void>;
 }) {
   const { t } = useLanguage();
+  const decisionDialog = useApprovalDialog();
   const admin = data.user.role === "admin",
     own = data.organizations?.find((o: R) => o.owner_id === data.user.id),
     [editApplication, setEditApplication] = useState(false),
@@ -736,6 +741,7 @@ export function OrganizationPanel({
   }
   return (
     <>
+      {decisionDialog.popup}
       {error && (
         <div className="error" role="alert">
           {t(error)}
@@ -826,10 +832,17 @@ export function OrganizationPanel({
             <>
               <button
                 className="button"
-                onClick={() => setEditApplication(!editApplication)}
+                onClick={async () => {
+                  if (o.status === "rejected") {
+                    await decisionDialog.notify(REJECTED_APPLICATION_MESSAGE);
+                    await signOut();
+                    return;
+                  }
+                  setEditApplication(!editApplication);
+                }}
               >
                 {t("Update and resubmit application")}</button>
-              <form onSubmit={verification} className="review-form">
+              {o.status !== "rejected" && <form onSubmit={verification} className="review-form">
                 <Field
                   label={t("Additional registration document")}
                   name="file"
@@ -839,12 +852,12 @@ export function OrganizationPanel({
                 />
                 <button className="button" disabled={busy}>
                   {t("Upload supporting document")}</button>
-              </form>
+              </form>}
             </>
           )}
         </section>
       ))}
-      {editApplication && own && (
+      {editApplication && own && own.status !== "rejected" && (
         <section className="panel">
           <h2>{t("Update organization application")}</h2>
           <form onSubmit={resubmit}>
@@ -1067,6 +1080,7 @@ export function OrganizationPanel({
 }
 export function RestrictedPortal({ initial }: { initial: R }) {
   const { t } = useLanguage();
+  const decisionDialog = useApprovalDialog();
   const [data, setData] = useState(initial),
     [tab, setTab] = useState("application"),
     [error, setError] = useState(""),
@@ -1077,6 +1091,23 @@ export function RestrictedPortal({ initial }: { initial: R }) {
   const farmer = data.user.account_type === "organization_farmer";
   async function refresh() {
     await responseError(await fetch("/api/data")).then(setData);
+  }
+  async function refreshApprovalStatus() {
+    setBusy(true);
+    setError("");
+    try {
+      const latest = await responseError(await fetch("/api/data"));
+      const handled = await acknowledgeApproval(latest.user.organization_status, {
+        notify: decisionDialog.notify,
+        openDashboard: () => location.reload(),
+        signOut,
+      });
+      if (!handled) setData(latest);
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
   }
   async function changePassword(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -1111,6 +1142,7 @@ export function RestrictedPortal({ initial }: { initial: R }) {
       .reduce((s: number, e: R) => s + e.payload.amount, 0);
   return (
     <div className={"restricted-shell " + (farmer ? "farmer-workspace" : "")}>
+      {decisionDialog.popup}
       <header>
         <div className="brand">
           <span>
@@ -1264,6 +1296,7 @@ export function RestrictedPortal({ initial }: { initial: R }) {
               <p>
                 {t("Administrator approval is required before registering farmers, assigning supervisors or using organization operations. You can maintain your application and land records here.")}</p>
             </div>
+            {data.user.account_type === "organization_owner" && <OrganizationRegistrationSteps status={data.user.organization_status} />}
             <div className="tabs">
               <button
                 className={tab === "application" ? "active" : ""}
@@ -1281,7 +1314,7 @@ export function RestrictedPortal({ initial }: { initial: R }) {
             ) : (
               <LandPanel data={data} onRefresh={refresh} />
             )}
-            <button className="button" onClick={() => location.reload()}>
+            <button className="button" disabled={busy} onClick={refreshApprovalStatus}>
               {t("Refresh approval status")}</button>
           </>
         )}
