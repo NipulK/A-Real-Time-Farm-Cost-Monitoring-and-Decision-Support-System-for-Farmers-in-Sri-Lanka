@@ -1,0 +1,15 @@
+# Organization decision feedback QA — 20 October 2026
+
+Implemented the requested approval/rejection feedback on Refresh approval status using browser-native alert popups with an OK button. Approved acknowledgment reloads into the dashboard; rejected acknowledgment signs out into login. The rejected Update and resubmit application shortcut shows the contact-system-administrator message and signs out without editing. Rejected applications receive HTTP 403 for resubmitOrganization; the status remains rejected. Supporting-document upload controls are hidden for rejected applications. Pending and Needs information preserve the existing application view and correction workflow.
+
+Verification: `npm test` (44 passed), `npm run typecheck`, `npm run build`, `QA_PORT=3108 npm run qa:http` (47 integration groups passed). All passed using isolated test storage. Tests verify acknowledgment ordering, no terminal popup/navigation for pending/needs_info, rejected resubmission denial and continued needs_info resubmission. Real application data unchanged.
+
+Browser checks remain: after an administrator approves, click Refresh approval status, read welcome popup, press OK and verify dashboard; after rejection repeat and verify contact message then login after OK; sign back into rejected account and click Update and resubmit application to verify contact popup then login, without editor or resubmission; verify pending/needs_info refresh leaves application screen and needs_info corrections still resubmit. Browser testing was not performed in this change due the existing saved browser-access denial.
+
+User-reported manual checks before this change: login/dashboard, approvals, needs-information feedback/restrictions, corrected resubmission, rejection/restrictions, dashboard totals and audit history passed. These do not certify the newly added popup interactions.
+
+## Themed dialog and registration indicator update
+
+Browser-native alerts were replaced by Farmwise-styled modal dialogs with an accessible title/message, status icon, focused OK action and modal backdrop. Navigation waits for OK through an asynchronous acknowledgment. Escape does not dismiss a decision. The indicator is shown only on organization signup and the organization owner's application portal; it is not part of operational dashboards or other-role signup. Draft details/land focus indicates the current section, without claiming validation completion; after submission, Admin review is current. Needs information displays Action required, Rejected displays the contact-administrator outcome, and Approved completes registration before the dashboard transition.
+
+Latest checks: 47 automated tests, 47 isolated HTTP integration groups, TypeScript and production build all passed. New tests exercise asynchronous acknowledgment ordering, rendered dialog accessibility/OK control and draft/pending/needs_info/rejected/approved step states. Actual browser rendering, modal focus restoration, phone layout and clicking OK through final navigation remain unverified because of saved browser-access denial. No real data was modified.

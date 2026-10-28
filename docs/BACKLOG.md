@@ -36,3 +36,7 @@ Evidence and limitations: docs/QA_REPORT.md. Checked items mean local implementa
 
 ## Optional extensions
 Offline entry/conflict resolution, multi-currency/units, purchasing/usage inventory allocation, payroll and seasonal models only after suitable data collection. Archive/retention and accounting expansion need explicit business rules; current closed seasons retain auditable history.
+
+## KYS outcome verification — 25 October 2026
+- [x] Explicit four-state KYS model and rendered panels, missing-record guidance, per-cultivation scope, Sinhala labels and summary CSV status. Verified by 57 automated tests and 51 HTTP integration groups; typecheck/build passed. See QA_KYS_OUTCOMES_2026-10-25.md.
+- [x] User-operated Chrome acceptance of four outcomes, with screenshots and uploaded Summary CSV review on 28–29 October 2026. Agent-controlled Chrome remains blocked. Ledger CSV and print preview are separate outstanding acceptance checks.

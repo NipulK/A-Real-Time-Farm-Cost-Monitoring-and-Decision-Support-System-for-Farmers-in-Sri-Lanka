@@ -1,5 +1,5 @@
 {
-  "started": "2026-10-18T21:56:07.110Z",
+  "started": "2026-10-28T10:46:08.651Z",
   "checks": [
     {
       "name": "Anonymous protected routes and bootstrap registration guard",
@@ -42,7 +42,7 @@
       "pass": true
     },
     {
-      "name": "Admin rejection, feedback, resubmission and more-information flow",
+      "name": "Admin rejection blocks resubmission; more-information applications can resubmit",
       "pass": true
     },
     {
@@ -176,10 +176,38 @@
     {
       "name": "Dedicated administrator workspace and summary endpoint enforce administrator-only access",
       "pass": true
+    },
+    {
+      "name": "Restricted farmer cultivation totals distinguish equal names and exclude voided and other-farmer expenses",
+      "pass": true
+    },
+    {
+      "name": "Exports reject unsupported and malformed formats for all five roles",
+      "pass": true
+    },
+    {
+      "name": "Approval revocation returns restricted portal data and pages for every organization role",
+      "pass": true
+    },
+    {
+      "name": "KYS Profit: SQLite snapshot, rendered result and CSV agree",
+      "pass": true
+    },
+    {
+      "name": "KYS Loss: SQLite snapshot, rendered result and CSV agree",
+      "pass": true
+    },
+    {
+      "name": "KYS Break-even: SQLite snapshot, rendered result and CSV agree",
+      "pass": true
+    },
+    {
+      "name": "KYS Insufficient information: SQLite snapshot, rendered result and CSV agree",
+      "pass": true
     }
   ],
-  "storage": "/var/folders/4w/cy18l1w505v_gjnw_tb4kjt00000gn/T/farmwise-http-qa-vKZovT",
-  "base": "http://127.0.0.1:3107",
-  "finished": "2026-10-18T21:56:09.666Z",
-  "passed": 44
+  "storage": "/var/folders/4w/cy18l1w505v_gjnw_tb4kjt00000gn/T/farmwise-http-qa-uNupO6",
+  "base": "http://127.0.0.1:3108",
+  "finished": "2026-10-28T10:46:11.362Z",
+  "passed": 51
 }
