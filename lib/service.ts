@@ -217,7 +217,7 @@ export function snapshot(user: Row): Row {
     const entries =
       user.organization_status === "approved"
         ? all(
-            "SELECT e.id,e.date,e.voided,e.payload,c.name cultivation_name,u.name recorded_by FROM entries e JOIN expense_farmers ef ON ef.entry_id=e.id JOIN cultivations c ON c.id=e.cultivation_id JOIN profiles p ON p.user_id=c.owner_id JOIN users u ON u.id=e.created_by WHERE e.kind='expense' AND ef.farmer_id=? AND p.organization_id=? ORDER BY e.date DESC,e.created_at DESC",
+            "SELECT e.id,e.date,e.voided,e.payload,c.id cultivation_id,c.name cultivation_name,u.name recorded_by FROM entries e JOIN expense_farmers ef ON ef.entry_id=e.id JOIN cultivations c ON c.id=e.cultivation_id JOIN profiles p ON p.user_id=c.owner_id JOIN users u ON u.id=e.created_by WHERE e.kind='expense' AND ef.farmer_id=? AND p.organization_id=? ORDER BY e.date DESC,e.created_at DESC",
             user.id,
             user.organization_id,
           ).map((e) => {
@@ -225,6 +225,7 @@ export function snapshot(user: Row): Row {
             return {
               id: e.id,
               kind: "expense",
+              cultivation_id: e.cultivation_id,
               date: e.date,
               voided: e.voided,
               cultivation_name: e.cultivation_name,
@@ -242,7 +243,9 @@ export function snapshot(user: Row): Row {
     return {
       user,
       restricted: true,
-      entries,
+      // Only the count leaves this boundary; cultivation IDs and full records stay private.
+      expenseCultivationCount: new Set(entries.filter(e => !e.voided).map(e => e.cultivation_id)).size,
+      entries: entries.map(({ cultivation_id, ...entry }) => entry),
       receipts: all("SELECT id,entry_id,name,mime,size FROM receipts").filter(
         (r) => ids.has(r.entry_id),
       ),
@@ -279,7 +282,7 @@ export function snapshot(user: Row): Row {
     (f) => user.role === "admin" || f.owner_id === user.id || fids.has(f.id),
   );
   const farmids = new Set(fields.map((f) => f.farm_id));
-  const farms = all("SELECT * FROM farms").filter(
+  const farms = all("SELECT f.*, EXISTS(SELECT 1 FROM farm_lands fl WHERE fl.farm_id=f.id) registered_land FROM farms f").filter(
     (f) => user.role === "admin" || f.owner_id === user.id || farmids.has(f.id),
   );
   const entries: Row[] = all(

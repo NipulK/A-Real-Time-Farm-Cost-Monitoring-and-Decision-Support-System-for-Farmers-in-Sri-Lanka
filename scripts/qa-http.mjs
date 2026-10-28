@@ -1072,6 +1072,11 @@ try {
     ]) {
       const page = await as.request("/");
       assert.equal(page.status, 200, role);
+      const heading={administrator:'Dashboard',independent:'A clearer view of your farm.','organization owner':'Organization overview',supervisor:'Supervisor overview','organization farmer':'My expenses'}[role];
+      assert(page.data.includes('<h1>'+heading+'</h1>'),role+' receives its own dashboard');
+      const state=await as.snapshot();
+      assert(!state.users?.some(u=>'password' in u));
+      assert(!('password' in state.user));
       if (role === "organization farmer") {
         assert(page.data.includes("My expenses"));
         assert(!page.data.includes("Register member"));
@@ -1480,6 +1485,7 @@ try {
     async () => {
       const orgState = await owner.snapshot();
       const orgField = orgState.fields.find((f) => f.id === ids.orgField);
+      assert.equal(orgState.farms.find((f) => f.id === orgField.farm_id).registered_land, 1);
       assert.equal(
         (
           await owner.write({
@@ -1725,6 +1731,48 @@ try {
     assert.equal(after.adminSummary.inactive,s.inactive+1);
     assert.equal(after.adminSummary.active,s.active-1);
     assert.equal((await admin.write({action:'userActive',id:target.id,active:true})).status,200);
+  });
+  await check("Restricted farmer cultivation totals distinguish equal names and exclude voided and other-farmer expenses", async () => {
+    assert.equal((await farmerA.snapshot()).expenseCultivationCount,1);
+    assert.equal((await farmerB.snapshot()).expenseCultivationCount,1);
+    const expenses=[];
+    for(let i=0;i<2;i++){
+      const cid=await create(owner,'cultivation',{name:'Same QA cultivation name',field_id:ids.orgField,crop_id:'watermelon',variety:'Common',planted:'2026-09-01',harvest_date:'2026-11-01',acres:0.25,budget:100,forecast_kg:10});
+      assert.equal((await owner.write({action:'assign',cultivation_id:cid,user_id:ids.supervisor})).status,200);
+      assert.equal((await reg(owner,{action:'assignFarmer',cultivation_id:cid,farmer_id:ids.farmerA})).status,200);
+      expenses.push(await create(supervisor,'expense',{description:'QA count regression',category:'Seeds',basis:'cash',amount:1,farmer_id:ids.farmerA},cid));
+    }
+    const a=await farmerA.snapshot();
+    assert.equal(a.expenseCultivationCount,3);
+    assert(a.entries.every(e=>!('cultivation_id' in e)));
+    assert.equal((await farmerB.snapshot()).expenseCultivationCount,1);
+    assert((await farmerA.request('/')).data.replace(/<!--[\s\S]*?-->/g,'').includes('3 cultivations with recorded expenses'));
+    for(const [i,id] of expenses.entries()){
+      assert.equal((await supervisor.write({action:'void',id,reason:'QA count regression correction'})).status,200);
+      assert.equal((await farmerA.snapshot()).expenseCultivationCount,2-i);
+    }
+  });
+  await check("Exports reject unsupported and malformed formats for all five roles", async () => {
+    for(const actor of [admin,independent,owner,supervisor,farmerA]){
+      assert.equal((await actor.request('/api/export?kind=unknown')).status,400);
+      assert.equal((await actor.request('/api/export?kind=%0Ainvalid')).status,400);
+    }
+  });
+  await check("Approval revocation returns restricted portal data and pages for every organization role", async () => {
+    assert.equal((await reg(admin,{action:'reviewOrganization',id:ids.org,status:'needs_info',note:'QA role restriction recheck'})).status,200);
+    for(const actor of [owner,supervisor,farmerA,farmerB]){
+      const state=await actor.snapshot();
+      assert.equal(state.restricted,true);
+      assert.equal(state.entries.length,0);
+      assert.equal(state.farms,undefined);
+      assert.equal((await actor.request('/')).status,200);
+      assert.equal((await actor.request('/api/export?kind=summary')).status,403);
+    }
+    assert.equal((await farmerA.snapshot()).expenseCultivationCount,0);
+    assert.equal((await reg(admin,{action:'reviewOrganization',id:ids.org,status:'approved',note:'QA role restriction restored'})).status,200);
+    assert.equal((await owner.snapshot()).restricted,undefined);
+    assert.equal((await supervisor.snapshot()).restricted,undefined);
+    assert.equal((await farmerA.snapshot()).expenseCultivationCount,1);
   });
   report.finished = new Date().toISOString();
   report.passed = report.checks.length;

@@ -147,6 +147,10 @@ export default function Workspace({
       if (r.status === 401) location.reload();
       throw new Error(j.error);
     }
+    if (j.restricted) {
+      location.reload();
+      return;
+    }
     setData(j);
   }
   async function write(body: R) {
@@ -1285,12 +1289,13 @@ export default function Workspace({
                       <button
                         className="text-button"
                         onClick={() =>
-                          data.lands?.some((l: R) => l.id === f.id)
+                          f.registered_land
                             ? go("lands")
                             : open("editFarm", f.id)
                         }
                       >
-                        {t("Edit farm")}</button>
+                        {t(f.registered_land ? "Edit land" : "Edit farm")}
+                      </button>
                     )}
                   </div>
                 ))}

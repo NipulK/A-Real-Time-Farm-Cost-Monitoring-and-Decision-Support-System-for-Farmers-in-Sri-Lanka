@@ -26,3 +26,11 @@ test('organization farmer breakdown excludes voids and portal provides no writin
  assert(html.includes('Search my expenses'));assert(html.includes('Refresh expenses'));assert(html.includes('Download my expenses'));assert(!html.includes('Add expense'));assert(!html.includes('Manage farmers'));assert(!html.includes('Sales revenue'));
  const pending=renderToStaticMarkup(createElement(RestrictedPortal,{initial:{user:{...user,organization_status:'pending'},entries:[],receipts:[]}}));assert(!pending.includes('Expense breakdown'));assert(!pending.includes('Download my expenses'));
 });
+
+test('organization farmer uses the server aggregate without needing private cultivation identifiers',()=>{
+ const user={role:'farmer',account_type:'organization_farmer',name:'Farmer',organization_status:'approved'};
+ const expenses=[{id:'one',date:'2026-10-01',cultivation_name:'Same name',payload:{category:'Seeds',basis:'cash',amount:100}},{id:'two',date:'2026-10-01',cultivation_name:'Same name',payload:{category:'Seeds',basis:'cash',amount:200}}];
+ const html=renderToStaticMarkup(createElement(RestrictedPortal,{initial:{user,entries:expenses,receipts:[],expenseCultivationCount:2}}));
+ assert(html.includes('2 cultivations with recorded expenses'));
+ assert(!html.includes('1 cultivation with recorded expenses'));
+});

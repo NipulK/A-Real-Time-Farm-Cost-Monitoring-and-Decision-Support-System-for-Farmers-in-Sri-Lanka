@@ -7,6 +7,8 @@ export async function GET(request: Request) {
     const params = new URL(request.url).searchParams;
     const kind = params.get("kind") || "ledger",
       cid = params.get("cultivation");
+    if (!["summary", "ledger", "audit"].includes(kind))
+      throw new Error("400: Choose summary, ledger or audit export.");
     if (data.restricted) {
       if (
         data.user.account_type !== "organization_farmer" ||

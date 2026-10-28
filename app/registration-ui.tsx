@@ -1174,7 +1174,7 @@ export function RestrictedPortal({ initial }: { initial: R }) {
                 {t("Your organization is not approved for operations. Expense access is currently unavailable.")}</div>
             ) : (
               <>
-                <FarmerExpenseOverview user={data.user} expenses={expenses} part="hero" />
+                <FarmerExpenseOverview user={data.user} expenses={expenses} cultivationCount={data.expenseCultivationCount} part="hero" />
                 <div className="notice">
                   <ShieldCheck size={20} />
                   <p>
@@ -1194,7 +1194,7 @@ export function RestrictedPortal({ initial }: { initial: R }) {
                     <strong>{money(cash + imputed)}</strong>
                   </div>
                 </div>
-                <FarmerExpenseOverview user={data.user} expenses={expenses} part="breakdown" />
+                <FarmerExpenseOverview user={data.user} expenses={expenses} cultivationCount={data.expenseCultivationCount} part="breakdown" />
                 <section className="panel">
                   <div className="panel-head">
                     <h2>{t("Expenses for ")}{data.user.public_id}</h2>
