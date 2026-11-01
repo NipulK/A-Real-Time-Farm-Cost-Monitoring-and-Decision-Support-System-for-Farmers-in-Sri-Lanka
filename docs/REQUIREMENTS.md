@@ -42,3 +42,11 @@ User chose **Self-employed farmer** for the visible independent-farmer category.
 
 ## Explicit KYS classification — 25 October 2026
 Each cultivation requires a nonvoided expense, positive saleable harvest and a nonvoided sale before Profit/Loss/Break-even is assigned. Otherwise show Insufficient information with missing-record guidance. Compare agreed sales revenue with cash plus imputed costs in integer cents. Exclude funding, payments, forecasts and voided records. Results are per cultivation, with explicit provisional wording for open cultivations. Snapshot, summary CSV and financial KYS panels share the rule. This evaluates recorded data completeness only and cannot verify that all real-world expenses were entered.
+
+## Objective 2 cost–price analysis — 1 November 2026
+Per-cultivation cost/kg versus quantity-weighted actual agreed sale price/kg, with signed difference, category cash/imputed shares and unit-cost contributions, harvest losses and unsold stock. Ratios require actual denominator records, with explicit missing-data guidance. Partial-sales difference is not whole-season profit. Summary CSV and category breakdown exports enforce existing role scope. Independent UI is English/Sinhala. Descriptive expense contributions are not evidence of market-price causation. See QA_OBJECTIVE_2_COST_PRICE.md.
+
+Cost recovery uses recorded economic cost less agreed sales revenue, floored at zero; required remaining-stock average price divides this by actual unsold saleable kg and rounds upward to cents. Withhold if required records/stock are absent; future expenses/losses are not assumed known. Forecast scenarios require one selected cultivation and finite non-negative safe numeric assumptions.
+
+## Temporary viva password policy — 1 November 2026
+User-authorized local demonstration mode permits four/five ASCII digits or 12–256 characters for every role. Explicit server flag, form agreement, hashed storage and unchanged authorization/throttling. Normal mode remains 12–256 characters; no existing real account reset is implied. See DEMONSTRATION_PASSWORDS.md.

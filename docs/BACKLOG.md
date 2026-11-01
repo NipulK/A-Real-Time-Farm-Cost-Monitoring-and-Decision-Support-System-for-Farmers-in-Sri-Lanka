@@ -40,3 +40,10 @@ Offline entry/conflict resolution, multi-currency/units, purchasing/usage invent
 ## KYS outcome verification — 25 October 2026
 - [x] Explicit four-state KYS model and rendered panels, missing-record guidance, per-cultivation scope, Sinhala labels and summary CSV status. Verified by 57 automated tests and 51 HTTP integration groups; typecheck/build passed. See QA_KYS_OUTCOMES_2026-10-25.md.
 - [x] User-operated Chrome acceptance of four outcomes, with screenshots and uploaded Summary CSV review on 28–29 October 2026. Agent-controlled Chrome remains blocked. Ledger CSV and print preview are separate outstanding acceptance checks.
+
+## Objective 2 local analysis
+- [x] Recorded cost versus weighted selling-price comparison, category contributions, harvest context and scoped exports; English/Sinhala and 66 automated / 52 HTTP groups, TypeScript/build passed.
+- [ ] Manual browser visual/mobile/print acceptance for the new analysis panels.
+- [ ] Real-data research to establish causes of the cost–price gap; not replaceable by software implementation.
+
+- [x] Remaining-stock cost recovery, upward cent rounding and invalid-scenario guards; single-cultivation scenarios; English/Sinhala; 70 automated tests and 53 integration groups passed.
