@@ -1,4 +1,5 @@
 "use client";
+import { useDemonstrationPasswords, passwordInputProps } from "./password-policy";
 import { CostPriceAnalysis } from "./cost-price-analysis";
 import { KysStatusPanel } from "./kys-status";
 import { evaluateKys } from "../lib/kys";
@@ -3005,11 +3006,13 @@ function Brand() {
   );
 }
 function Field({ label, ...props }: { label: string; [key: string]: any }) {
+  const demonstrationPasswords = useDemonstrationPasswords();
+  const demoField = demonstrationPasswords && props.type === "password" && props.minLength === 12 && props.name !== "confirm_password";
   const { t } = useLanguage();
   return (
     <label className="field">
-      <span>{t(label as string)}</span>
-      <input {...props} />
+      <span>{t(demoField ? "Demo password (4–5 digits or 12+ characters)" : label as string)}</span>
+      <input {...passwordInputProps(props, demonstrationPasswords)} />
     </label>
   );
 }

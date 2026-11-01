@@ -1,3 +1,5 @@
+import { PasswordPolicyProvider } from "./password-policy";
+import { demonstrationPasswordsEnabled } from "@/lib/password-policy";
 import type { Metadata } from "next";
 import "./globals.css";
 export const metadata: Metadata = {
@@ -12,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body><PasswordPolicyProvider demonstration={demonstrationPasswordsEnabled()}>{children}</PasswordPolicyProvider></body>
     </html>
   );
 }

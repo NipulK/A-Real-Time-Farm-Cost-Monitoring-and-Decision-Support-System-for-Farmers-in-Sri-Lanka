@@ -1,3 +1,4 @@
+import { passwordSchema } from "@/lib/password-policy";
 import { normalizeMobile } from "@/lib/phone";
 import { randomUUID } from "node:crypto";
 import { cookies } from "next/headers";
@@ -29,10 +30,8 @@ export async function POST(request: Request) {
     if (body.action === "changePassword" || body.action === "resetPassword") {
       const actor = await requireUser();
       const password = String(body.password || "");
-      if (password.length < 12 || password.length > 256)
-        throw new Error(
-          "400: Use a new password between 12 and 256 characters.",
-        );
+      const checkedPassword = passwordSchema.safeParse(password);
+      if (!checkedPassword.success) throw new Error("400: " + checkedPassword.error.issues[0].message);
       const target =
         body.action === "resetPassword" ? String(body.user_id || "") : actor.id;
       if (body.action === "resetPassword") admin(actor);
@@ -77,10 +76,9 @@ export async function POST(request: Request) {
     )
       throw new Error("400: Enter a valid email and password.");
     if (body.action === "setup") {
-      if (password.length < 12 || !String(body.name || "").trim())
-        throw new Error(
-          "400: Enter a name and a password of at least 12 characters.",
-        );
+      const checkedPassword = passwordSchema.safeParse(password);
+      if (!checkedPassword.success) throw new Error("400: " + checkedPassword.error.issues[0].message);
+      if (!String(body.name || "").trim()) throw new Error("400: Enter a name.");
       const id = randomUUID();
       transaction(() => {
         if (one("SELECT id FROM users LIMIT 1"))

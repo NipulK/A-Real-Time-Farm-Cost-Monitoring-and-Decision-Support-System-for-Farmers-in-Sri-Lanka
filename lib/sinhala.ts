@@ -1,5 +1,6 @@
 // Application copy only. User records and API values are preserved.
 export const sinhala: Record<string, string> = {
+  "Demo password (4–5 digits or 12+ characters)": "ආදර්ශන මුරපදය (ඉලක්කම් 4–5 හෝ අක්ෂර 12+)",
   "Recovering recorded costs": "සටහන් කළ පිරිවැය ආවරණය කිරීම",
   "Additional sales revenue needed to recover recorded economic cost": "සටහන් කළ ආර්ථික පිරිවැය ආවරණය කිරීමට අවශ්‍ය අමතර විකුණුම් ආදායම",
   "Required average price on remaining stock (LKR/kg)": "ඉතිරි තොගය සඳහා අවශ්‍ය සාමාන්‍ය මිල (රු./කි.ග්‍රෑ.)",

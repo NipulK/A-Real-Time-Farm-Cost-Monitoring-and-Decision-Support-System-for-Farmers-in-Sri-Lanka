@@ -1,3 +1,4 @@
+import { demonstrationPasswordsEnabled } from "./password-policy";
 import { hydrateUser } from "./access";
 import {
   randomBytes,
@@ -12,6 +13,7 @@ export function hashPassword(password: string) {
   return salt + ":" + scryptSync(password, salt, 64).toString("hex");
 }
 export function verifyPassword(password: string, hash: string) {
+  if (/^[0-9]{4,5}$/.test(password) && !demonstrationPasswordsEnabled()) return false;
   try {
     const [salt, key] = hash.split(":");
     return timingSafeEqual(

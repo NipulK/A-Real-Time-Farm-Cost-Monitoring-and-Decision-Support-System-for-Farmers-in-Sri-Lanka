@@ -1,3 +1,4 @@
+import { passwordSchema } from "./password-policy";
 import { evaluateKys } from "./kys";
 import { assertOperational, hydrateUser } from "./access";
 import { registrationView } from "./registration";
@@ -133,7 +134,7 @@ const schemas: Record<string, z.ZodType> = {
       .email()
       .max(254)
       .transform((v) => v.toLowerCase()),
-    password: z.string().min(12).max(256),
+    password: passwordSchema,
     role: z.enum(["farmer", "grower", "supervisor", "admin"]),
   }),
   crop: z.object({ name: text, varieties: z.string().max(1500) }),

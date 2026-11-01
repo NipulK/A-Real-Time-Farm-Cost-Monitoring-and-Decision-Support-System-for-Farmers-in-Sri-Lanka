@@ -24,7 +24,7 @@ function start() {
     ],
     {
       cwd: process.cwd(),
-      env: { ...process.env, FARMWISE_STORAGE: storage },
+      env: { ...process.env, FARMWISE_STORAGE: storage, FARMWISE_DEMO_PASSWORDS: process.env.FARMWISE_DEMO_PASSWORDS || "false" },
       stdio: ["ignore", "pipe", "pipe"],
     },
   );
@@ -1863,6 +1863,33 @@ try {
     const values=corrected.data.trim().split(/\r?\n/)[1].split(",").map(v=>v.slice(1,-1));
     assert.equal(values[lines[0].indexOf("additional_revenue_to_recover_cost_LKR")],"100");
     assert.equal(values[lines[0].indexOf("required_average_price_remaining_stock_LKR_per_kg")],"33.34");
+  });
+  await check("Password policy follows normal or explicit demonstration mode across roles", async () => {
+    const demo=process.env.FARMWISE_DEMO_PASSWORDS === "true";
+    const rejected=await admin.auth({action:"resetPassword",user_id:ids.independent,password:"1234"});
+    assert.equal(rejected.status,demo?200:400);
+    if(!demo) return;
+    for(const id of [ids.independent,ids.owner,ids.supervisor,ids.farmerA].filter(Boolean)){
+      const user=(await admin.snapshot()).users.find(u=>u.id===id);
+      assert.equal((await admin.auth({action:"resetPassword",user_id:id,password:"1234"})).status,200);
+      const fresh=client();assert.equal((await fresh.auth({action:"login",identifier:user.email,password:"1234"})).status,200);
+      assert.equal((await fresh.request("/")).status,200);
+      assert.equal((await fresh.auth({action:"changePassword",currentPassword:"1234",password:"01234"})).status,200);
+      assert.equal((await fresh.auth({action:"changePassword",currentPassword:"01234",password})).status,200);
+    }
+    assert.equal((await owner.auth({action:"login",identifier:"qa-owner@example.test",password})).status,200);
+    const newAdmin=await create(admin,"user",{name:"Demo PIN administrator",email:"qa-pin-admin@example.test",password:"12345",role:"admin"});
+    const pinAdmin=client();assert.equal((await pinAdmin.auth({action:"login",identifier:"qa-pin-admin@example.test",password:"12345"})).status,200);
+    assert.equal((await pinAdmin.snapshot()).user.role,"admin");
+    const newcomer=client();assert.equal((await registration(newcomer,"independent",{...account("Demo PIN Farmer","qa-pin-farmer@example.test","0770000091"),password:"1234"})).status,200);
+    assert.equal((await newcomer.snapshot()).user.account_type,"independent");
+    const applicant=client();assert.equal((await registration(applicant,"organization",{...account("Demo PIN Owner","qa-pin-owner@example.test","0770000092"),password:"01234"},orgDetails)).status,200);
+    assert.equal((await applicant.snapshot()).user.organization_status,"pending");
+    for(const [i,type] of ["supervisor","organization_farmer"].entries()){
+      assert.equal((await reg(owner,{action:"addMember",data:{...account("PIN member",`qa-pin-member-${i}@example.test`,`077000009${i+3}`),password:"1234",account_type:type,reference_number:"DEMO-PIN"}})).status,200);
+    }
+    for(const invalid of ["123","123456","abcd","12a4"]){assert.equal((await admin.auth({action:"resetPassword",user_id:newAdmin,password:invalid})).status,400);}
+    assert((await pinAdmin.request("/")).data.includes("Demonstration mode"));
   });
   report.passed = report.checks.length;
   writeFileSync("docs/qa-http-results.json", JSON.stringify(report, null, 2));

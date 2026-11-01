@@ -1,3 +1,4 @@
+import { passwordSchema } from "./password-policy";
 import { randomUUID } from "node:crypto";
 import { z } from "zod";
 import { all, one, run, transaction, Row } from "./db";
@@ -21,7 +22,7 @@ const accountSchema = z.object({
   language: z.enum(["en", "si"]).default("en"),
   mobile: phone,
   email: email.default(""),
-  password: z.string().min(12).max(256),
+  password: passwordSchema,
   district: text,
   village: text,
 });
@@ -436,7 +437,7 @@ export function registrationAction(input: Row, body: Row) {
         body.id,
       );
     else {
-      const pass = parsed(z.string().min(12).max(256), body.password);
+      const pass = parsed(passwordSchema, body.password);
       run(
         "UPDATE users SET password=? WHERE id=?",
         hashPassword(pass),
