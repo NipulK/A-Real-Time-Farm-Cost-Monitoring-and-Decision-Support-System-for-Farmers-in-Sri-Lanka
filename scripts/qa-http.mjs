@@ -1814,6 +1814,56 @@ try {
       assert.equal(unauthorized.status, 200); assert(!unauthorized.data.includes("KYS QA " + example.name));
     });
   }
+  await check("Cost-price analysis exports preserve scoped comparisons and deny restricted farmers", async () => {
+    const state = await independent.snapshot();
+    const profit = state.cultivations.find(c => c.name === "KYS QA Profit");
+    const blank = state.cultivations.find(c => c.name === "KYS QA Insufficient information");
+    const output = await independent.request("/api/export?kind=summary&cultivation=" + profit.id);
+    assert.equal(output.status, 200);
+    const lines = output.data.trim().replace(/^\uFEFF/, "").split(/\r?\n/);
+    const headers = lines[0].split(",").map(v => v.slice(1,-1));
+    const values = lines[1].split(",").map(v => v.slice(1,-1));
+    const row = Object.fromEntries(headers.map((h,i) => [h,values[i]]));
+    assert.equal(row.weighted_average_agreed_selling_price_LKR_per_kg, "120");
+    assert.equal(row.production_cost_LKR_per_saleable_kg, "100");
+    assert.equal(row.selling_price_minus_production_cost_LKR_per_kg, "20");
+    assert.equal(row.partial_sales, "false");
+    const detail = await independent.request("/api/export?kind=cost-breakdown&cultivation=" + profit.id);
+    assert.equal(detail.status,200); assert(detail.data.includes('"Seeds","8000","0","8000","80","80"'));
+    assert(detail.data.includes('"Labour","0","2000","2000","20","20"'));
+    const empty = await independent.request("/api/export?kind=cost-breakdown&cultivation=" + blank.id);
+    assert.equal(empty.status,200);assert.equal(empty.data.trim().split(/\r?\n/).length,1);
+    const unavailable = await independent.request("/api/export?kind=summary&cultivation=" + blank.id);
+    const vals = unavailable.data.trim().split(/\r?\n/)[1].split(",").map(v=>v.slice(1,-1));
+    for (const key of ["weighted_average_agreed_selling_price_LKR_per_kg","production_cost_LKR_per_saleable_kg","selling_price_minus_production_cost_LKR_per_kg"]) assert.equal(vals[headers.indexOf(key)],"");
+    for (const actor of [farmerA,farmerB]) assert.equal((await actor.request("/api/export?kind=cost-breakdown")).status,403);
+    for (const actor of [owner,supervisor]) {
+      const other = await actor.request("/api/export?kind=cost-breakdown&cultivation=" + profit.id);
+      assert.equal(other.status,200);assert(!other.data.includes("KYS QA Profit"));
+    }
+    const html=(await independent.request("/")).data;
+    // Root defaults to Overview; detail/decision/report rendering is covered by component tests.
+    assert(!((await farmerA.request("/")).data.includes("Cost and selling price comparison")));
+  });
+  await check("Remaining-stock recovery exports reflect partial sales and exclude capital and payments", async () => {
+    const cid=await create(independent,"cultivation",{name:"Cost recovery QA",field_id:kysField,crop_id:"carrot",variety:"Common",planted:"2026-09-01",harvest_date:"2026-11-01",acres:0.01,budget:1000,forecast_kg:3});
+    await create(independent,"expense",{description:"Recovery cost",category:"Seeds",basis:"cash",amount:100},cid);
+    const hid=await create(independent,"harvest",{description:"Recovery harvest",grade:"A",total:3,saleable:3,loss:0},cid);
+    const sid=await create(independent,"sale",{harvest_id:hid,buyer:"QA recovery buyer",kg:1,price:25},cid);
+    await create(independent,"investment",{description:"Capital excluded",investor:"QA",amount:1000},cid);
+    const output=await independent.request("/api/export?kind=summary&cultivation="+cid);
+    assert.equal(output.status,200);
+    const lines=output.data.trim().replace(/^\uFEFF/,"").split(/\r?\n/).map(l=>l.split(",").map(v=>v.slice(1,-1)));
+    const row=Object.fromEntries(lines[0].map((h,i)=>[h,lines[1][i]]));
+    assert.equal(row.additional_revenue_to_recover_cost_LKR,"75");
+    assert.equal(row.required_average_price_remaining_stock_LKR_per_kg,"37.5");
+    assert.equal(row.partial_sales,"true");
+    assert.equal((await independent.write({action:"void",id:sid,reason:"Recovery correction QA"})).status,200);
+    const corrected=await independent.request("/api/export?kind=summary&cultivation="+cid);
+    const values=corrected.data.trim().split(/\r?\n/)[1].split(",").map(v=>v.slice(1,-1));
+    assert.equal(values[lines[0].indexOf("additional_revenue_to_recover_cost_LKR")],"100");
+    assert.equal(values[lines[0].indexOf("required_average_price_remaining_stock_LKR_per_kg")],"33.34");
+  });
   report.passed = report.checks.length;
   writeFileSync("docs/qa-http-results.json", JSON.stringify(report, null, 2));
   console.log(`\n${report.passed} integration groups passed. Server ${base}`);

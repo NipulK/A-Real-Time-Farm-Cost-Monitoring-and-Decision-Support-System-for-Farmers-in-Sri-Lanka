@@ -1,4 +1,5 @@
 "use client";
+import { CostPriceAnalysis } from "./cost-price-analysis";
 import { KysStatusPanel } from "./kys-status";
 import { evaluateKys } from "../lib/kys";
 import { TeamOverview } from "./role-dashboards";
@@ -622,12 +623,12 @@ export default function Workspace({
   // When nothing can be charted, show the original evidence by default.
   const visiblePrices = marketRows.filter((p) => showFlagged || !chartRows.length || priceEligible(p));
   const unitCostLabel = cs.length > 0 && cs.every(x => x.status === "closed") ? "Final cost per kg" : "Cost per kg so far";
-  const targetYield = Math.max(0, Number(scenarioYield || c?.forecast_kg || 0)),
+  const targetYield = Number(scenarioYield === "" ? c?.forecast_kg || 0 : scenarioYield),
     proj = scenario(
       summary.cost,
-      Math.max(0, Number(remaining)) * 100,
+      Number(remaining) * 100,
       targetYield,
-      Math.max(0, Number(scenarioPrice)) * 100,
+      scenarioPrice.trim() === "" ? NaN : Number(scenarioPrice) * 100,
     );
   return (
     <div className={"shell " + (roleWorkspace ? "team-workspace" : user.account_type === "independent" ? "team-workspace independent-workspace" : "")}>
@@ -1073,6 +1074,7 @@ export default function Workspace({
                     />}
                   </div>
                   <KysStatusPanel cultivations={[c] as any} entries={entries as any} />
+                  <CostPriceAnalysis cultivations={[c] as any} entries={entries as any} />
                   <CultivationPriceHistory key={c.id} crop={c.crop} historical={historical} />
                   <div className="dashboard-grid">
                     <section className="panel">
@@ -1742,7 +1744,8 @@ export default function Workspace({
           {page === "decisions" && (
             <>
               <KysStatusPanel cultivations={cs as any} entries={entries as any} />
-              <div className="dashboard-grid">
+              <CostPriceAnalysis cultivations={cs as any} entries={entries as any} />
+              {c ? <div className="dashboard-grid">
                 <section className="panel">
                   <PanelHead
                     title={t("Revenue scenario")}
@@ -1781,7 +1784,7 @@ export default function Workspace({
                   <div className="scenario-result">
                     <small>{t("PROJECTED ECONOMIC PROFIT / LOSS")}</small>
                     <strong>
-                      {targetYield > 0
+                      {!proj.valid ? t("Enter valid non-negative scenario values.") : targetYield > 0
                         ? money(proj.profit)
                         : t("Enter a forecast yield")}
                     </strong>
@@ -1825,7 +1828,7 @@ export default function Workspace({
                   <p className="helper">
                     {t("Break-even = (actual economic cost + additional forecast cost) / assumed yield. No reliable seasonal predictions or best-day-to-sell promises are supported by the sparse, irregular historical records.")}</p>
                 </section>
-              </div>
+              </div> : <p className="notice">{t("Choose one cultivation to calculate a revenue scenario. Costs and yields from different cultivations must not be combined.")}</p>}
               <section className="panel">
                 <PanelHead
                   title={t("Validated farm-sale prices")}
@@ -1913,11 +1916,13 @@ export default function Workspace({
                     }
                   >
                     <Download size={16} /> {t("Ledger CSV")}</a>
+                  <a className="button" href={"/api/export?kind=cost-breakdown&cultivation=" + (selected === "all" ? "" : selected)}><Download size={16} /> {t("Expense breakdown CSV")}</a>
                   <button className="button" onClick={() => window.print()}>
                     {t("Print report")}</button>
                 </div>
               </div>
               <KysStatusPanel cultivations={cs as any} entries={entries as any} />
+              <CostPriceAnalysis cultivations={cs as any} entries={entries as any} />
               <section className="panel">
                 <PanelHead
                   title={t("Cultivation financial statement")}

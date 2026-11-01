@@ -46,10 +46,14 @@ export function scenario(
   yieldKg: number,
   price: number,
 ) {
+  const valid = [cost, remaining, yieldKg, price].every(n => Number.isFinite(n) && n >= 0)
+    && Number.isSafeInteger(Math.round(yieldKg * price)) && Number.isSafeInteger(Math.round(cost + remaining))
+    && (yieldKg === 0 || Number.isFinite((cost + remaining) / yieldKg));
   return {
-    revenue: Math.round(yieldKg * price),
-    profit: Math.round(yieldKg * price) - cost - remaining,
-    breakEven: yieldKg > 0 ? (cost + remaining) / yieldKg : null,
+    valid,
+    revenue: valid ? Math.round(yieldKg * price) : null,
+    profit: valid ? Math.round(yieldKg * price) - cost - remaining : null,
+    breakEven: valid && yieldKg > 0 ? (cost + remaining) / yieldKg : null,
   };
 }
 export function eligibleBenchmark(rows: Record<string, any>[]) {
