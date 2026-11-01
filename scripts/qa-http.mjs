@@ -1889,7 +1889,7 @@ try {
       assert.equal((await reg(owner,{action:"addMember",data:{...account("PIN member",`qa-pin-member-${i}@example.test`,`077000009${i+3}`),password:"1234",account_type:type,reference_number:"DEMO-PIN"}})).status,200);
     }
     for(const invalid of ["123","123456","abcd","12a4"]){assert.equal((await admin.auth({action:"resetPassword",user_id:newAdmin,password:invalid})).status,400);}
-    assert((await pinAdmin.request("/")).data.includes("Demonstration mode"));
+    assert(!(await pinAdmin.request("/")).data.includes("demo-password-notice"));
   });
   report.passed = report.checks.length;
   writeFileSync("docs/qa-http-results.json", JSON.stringify(report, null, 2));

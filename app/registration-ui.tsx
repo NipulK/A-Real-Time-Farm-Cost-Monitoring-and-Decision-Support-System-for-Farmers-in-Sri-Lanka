@@ -1,5 +1,5 @@
 "use client";
-import { useDemonstrationPasswords, passwordInputProps } from "./password-policy";
+import { PasswordInput } from "./password-policy";
 import { OrganizationRegistrationSteps, useApprovalDialog } from "./organization-registration-progress";
 import { FarmerExpenseOverview } from "./role-dashboards";
 import { acknowledgeApproval, REJECTED_APPLICATION_MESSAGE } from "../lib/approval-feedback";
@@ -22,13 +22,11 @@ const money = (n: number) =>
     maximumFractionDigits: 2,
   }).format(n / 100);
 function Field({ label, ...props }: { label: string; [key: string]: any }) {
-  const demonstrationPasswords = useDemonstrationPasswords();
-  const demoField = demonstrationPasswords && props.type === "password" && props.minLength === 12 && props.name !== "confirm_password";
   const { t } = useLanguage();
   return (
     <label className="field">
-      <span>{t(demoField ? "Demo password (4–5 digits or 12+ characters)" : label)}</span>
-      <input {...passwordInputProps(props, demonstrationPasswords)} />
+      <span>{t(label)}</span>
+      <PasswordInput inputProps={props} />
     </label>
   );
 }
@@ -403,7 +401,7 @@ function RegistrationForm({ setup, mode, setMode }: { setup: boolean; mode: stri
                   autoComplete="email"
                 />
                 <Field
-                  label={t("Password (12+ characters)")}
+                  label={t("Password")}
                   name="password"
                   type="password"
                   minLength={12}
@@ -919,7 +917,7 @@ export function OrganizationPanel({
                   name="reference_number"
                 />
                 <Field
-                  label={t("Initial password (12+ characters)")}
+                  label={t("Initial password")}
                   name="password"
                   type="password"
                   minLength={12}
@@ -1190,7 +1188,7 @@ export function RestrictedPortal({ initial }: { initial: R }) {
                 required
               />
               <Field
-                label={t("New password (12+ characters)")}
+                label={t("New password")}
                 name="password"
                 type="password"
                 minLength={12}

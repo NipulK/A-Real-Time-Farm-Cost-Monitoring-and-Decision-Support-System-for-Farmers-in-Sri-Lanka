@@ -2,7 +2,7 @@
 
 Enabled 1 November 2026 at the user's request for the viva. Local mode accepts four/five ASCII digits, including leading zeros, or existing 12–256 character passwords. Three/six-digit short passwords and short alphabetic/mixed passwords are rejected. All roles use the same server-side policy for registration, member creation, administrator creation, changes and resets. Password hashes remain salted scrypt; session revocation, role authorization and login throttling are retained.
 
-Runtime configuration: FARMWISE_DEMO_PASSWORDS=true in the ignored .env.local. A bilingual demonstration-mode notice appears on each page. Form constraints and labels use the server-provided mode; a client request cannot enable it. Existing account passwords are not automatically changed. Awaiting the user's chosen numeric password before resetting the five synthetic demonstration accounts. Real passwords are unchanged.
+Runtime configuration: FARMWISE_DEMO_PASSWORDS=true in the ignored .env.local. Password guidance appears beside creation/change/reset inputs, translated for independent farmers; no global banner is shown. Form constraints and inline hints use the server-provided mode; a client request cannot enable it. Existing account passwords are not automatically changed. Awaiting the user's chosen numeric password before resetting the five synthetic demonstration accounts. Real passwords are unchanged.
 
 To return to normal mode after the viva:
 1. While demo mode is still enabled, change numeric account passwords to 12+ character passwords, especially the administrator.

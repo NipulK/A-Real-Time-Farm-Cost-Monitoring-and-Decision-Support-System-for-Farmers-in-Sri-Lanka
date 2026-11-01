@@ -1,5 +1,8 @@
 // Application copy only. User records and API values are preserved.
 export const sinhala: Record<string, string> = {
+  "Use a 4–5 digit number. A password of 12–256 characters is also accepted.": "ඉලක්කම් 4–5ක අංකයක් භාවිතා කරන්න. අක්ෂර 12–256ක මුරපදයක් ද පිළිගනු ලැබේ.",
+  "Use a password between 12 and 256 characters.": "අක්ෂර 12 සහ 256 අතර මුරපදයක් භාවිතා කරන්න.",
+  "Keep your password somewhere safe.": "ඔබේ මුරපදය ආරක්ෂිත ස්ථානයක තබාගන්න.",
   "Demo password (4–5 digits or 12+ characters)": "ආදර්ශන මුරපදය (ඉලක්කම් 4–5 හෝ අක්ෂර 12+)",
   "Recovering recorded costs": "සටහන් කළ පිරිවැය ආවරණය කිරීම",
   "Additional sales revenue needed to recover recorded economic cost": "සටහන් කළ ආර්ථික පිරිවැය ආවරණය කිරීමට අවශ්‍ය අමතර විකුණුම් ආදායම",

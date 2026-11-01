@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { demonstrationPasswordsEnabled, passwordAccepted, passwordSchema } from "../lib/password-policy";
-import { PasswordPolicyProvider, passwordInputProps } from "../app/password-policy";
+import { PasswordPolicyProvider, PasswordInput, passwordInputProps } from "../app/password-policy";
 
 test("normal passwords stay strong; local demo permits exactly four/five ASCII digits",()=>{
  for(const p of ["1234","01234"]) {assert.equal(passwordAccepted(p,true),true);assert.equal(passwordAccepted(p,false),false);}
@@ -26,5 +26,16 @@ test("demo policy is explicit, server controlled and disabled for HTTPS or exter
 test("demo form constraints preserve masking and existing long passwords",()=>{
  const props={type:"password",minLength:12,maxLength:256};const demo=passwordInputProps(props,true);
  assert.equal(demo.type,"password");assert.equal(demo.minLength,4);assert(new RegExp('^'+demo.pattern+'$').test("01234"));assert(!new RegExp('^'+demo.pattern+'$').test("abcd"));assert.equal(passwordInputProps(props,false).minLength,12);
- const html=renderToStaticMarkup(createElement(PasswordPolicyProvider,{demonstration:true,children:createElement('div',null,'Content')}));assert(html.includes('Demonstration mode'));assert(html.includes('Content'));
+ const html=renderToStaticMarkup(createElement(PasswordPolicyProvider,{demonstration:true,children:createElement('div',null,'Content')}));assert(!html.includes('Demonstration mode'));assert(html.includes('Content'));
 });
+
+ test("password hints appear only beside new password fields, in the selected language",async()=>{
+  const { LanguageProvider }=await import("../app/language");
+  const render=(name:string,minLength:number,initial:"en"|"si",demonstration=true)=>renderToStaticMarkup(createElement(LanguageProvider,{enabled:true,initial,children:createElement(PasswordPolicyProvider,{demonstration,children:createElement(PasswordInput,{inputProps:{name,type:"password",minLength}})})}));
+  const html=render("password",12,"en");assert(html.includes("Use a 4–5 digit number."));assert(html.includes("aria-describedby"));assert(!html.includes("Demonstration mode"));
+  assert(render("password",12,"si").includes("ඉලක්කම් 4–5ක අංකයක්"));
+  assert(!render("password",1,"en").includes('class="password-hint"'));
+  assert(!render("currentPassword",undefined as any,"en").includes('class="password-hint"'));
+  assert(!render("confirm_password",12,"en").includes('class="password-hint"'));
+  assert(render("password",12,"en",false).includes("between 12 and 256 characters"));
+ });

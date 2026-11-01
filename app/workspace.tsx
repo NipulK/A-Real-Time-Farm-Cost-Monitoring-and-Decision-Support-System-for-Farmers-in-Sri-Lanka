@@ -1,5 +1,5 @@
 "use client";
-import { useDemonstrationPasswords, passwordInputProps } from "./password-policy";
+import { PasswordInput } from "./password-policy";
 import { CostPriceAnalysis } from "./cost-price-analysis";
 import { KysStatusPanel } from "./kys-status";
 import { evaluateKys } from "../lib/kys";
@@ -279,7 +279,7 @@ export default function Workspace({
             />
             {setup && (
               <small>
-                {t("Use at least 12 characters. Keep your password somewhere safe.")}</small>
+                {t("Keep your password somewhere safe.")}</small>
             )}
             {error && (
               <div className="error" role="alert">
@@ -2318,7 +2318,7 @@ export default function Workspace({
                       <p className="helper full">{t("Resetting password for ")}<strong>{resetUser.name}</strong> ({resetUser.email || resetUser.mobile || t("no contact provided")}).</p>
                     )}
                     <Field
-                      label={t("New password (12+ characters)")}
+                      label={t("New password")}
                       name="password"
                       type="password"
                       minLength={12}
@@ -2850,7 +2850,7 @@ export default function Workspace({
                       </select>
                     </label>
                     <Field
-                      label={t("Initial password (12+ characters)")}
+                      label={t("Initial password")}
                       name="password"
                       type="password"
                       minLength={12}
@@ -3006,13 +3006,11 @@ function Brand() {
   );
 }
 function Field({ label, ...props }: { label: string; [key: string]: any }) {
-  const demonstrationPasswords = useDemonstrationPasswords();
-  const demoField = demonstrationPasswords && props.type === "password" && props.minLength === 12 && props.name !== "confirm_password";
   const { t } = useLanguage();
   return (
     <label className="field">
-      <span>{t(demoField ? "Demo password (4–5 digits or 12+ characters)" : label as string)}</span>
-      <input {...passwordInputProps(props, demonstrationPasswords)} />
+      <span>{t(label as string)}</span>
+      <PasswordInput inputProps={props} />
     </label>
   );
 }
