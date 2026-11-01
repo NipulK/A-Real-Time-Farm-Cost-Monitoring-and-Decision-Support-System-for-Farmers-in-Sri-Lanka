@@ -1,5 +1,5 @@
 {
-  "started": "2026-10-28T10:46:08.651Z",
+  "started": "2026-11-01T17:14:25.394Z",
   "checks": [
     {
       "name": "Anonymous protected routes and bootstrap registration guard",
@@ -204,10 +204,22 @@
     {
       "name": "KYS Insufficient information: SQLite snapshot, rendered result and CSV agree",
       "pass": true
+    },
+    {
+      "name": "Cost-price analysis exports preserve scoped comparisons and deny restricted farmers",
+      "pass": true
+    },
+    {
+      "name": "Remaining-stock recovery exports reflect partial sales and exclude capital and payments",
+      "pass": true
+    },
+    {
+      "name": "Password policy follows normal or explicit demonstration mode across roles",
+      "pass": true
     }
   ],
-  "storage": "/var/folders/4w/cy18l1w505v_gjnw_tb4kjt00000gn/T/farmwise-http-qa-uNupO6",
-  "base": "http://127.0.0.1:3108",
-  "finished": "2026-10-28T10:46:11.362Z",
-  "passed": 51
+  "storage": "/var/folders/4w/cy18l1w505v_gjnw_tb4kjt00000gn/T/farmwise-http-qa-HmYN15",
+  "base": "http://127.0.0.1:3110",
+  "finished": "2026-11-01T17:14:28.001Z",
+  "passed": 54
 }
